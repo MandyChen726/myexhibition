@@ -15,7 +15,7 @@
 }
 
 .primaryColor {
-  color: #66CCCCFF;
+  color: var(--primary-color);
 }
 
 @media (prefers-color-scheme: light) {
