@@ -11,10 +11,10 @@ store.state.display.isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobi
 
 const themeOverrides = {
   common: {
-    "primaryColor": "#4350FFFF", // 这里可以自定义主题色
-    "primaryColorHover": "#747EFEFF",
-    "primaryColorPressed": "#182084FF",
-    "primaryColorSuppl": "#3B44BEFF",
+    "primaryColor": "#66CCCCFF", // 这里可以自定义主题色
+    "primaryColorHover": "#82EFECFF",
+    "primaryColorPressed": "#589B99FF",
+    "primaryColorSuppl": "#8CCFCDFF",
   },
 };
 </script>

@@ -3,38 +3,38 @@ import store from "../store/store";
 import Layout from "../components/Layout/layout.vue"
 import mLayout from "../components/Layout/mLayout.vue"
 import home from "../components/home/home.vue"
-import project from "../components/project/project.vue"
-import blog from "../components/blog/blog.vue"
+import mission from "../components/mission/mission.vue"
+import development from "../components/development/development.vue"
 import about from "../components/about/about.vue"
 
 const routes = [
     {
-        path: "/myexhibition", // 这里需要改成你 Github 仓库的名称
-        name: "landing",
+        path: "/myexhibition/",
+        name: "early-riser",
         component: store.state.display.isMobile ? mLayout : Layout,
         children: [
             {
                 path: "",
-                name: "home",
+                name: "early-riser-home",
                 component: home
             },
             {
-                path: "project",
-                name: "project",
-                component: project
+                path: "mission",
+                name: "early-riser-mission",
+                component: mission
             },
             {
-                path: "blog",
-                name: "blog",
-                component: blog
+                path: "development-history",
+                name: "early-riser-development",
+                component: development
             },
             {
                 path: "about",
-                name: "about",
+                name: "early-riser-about",
                 component: about
             }
         ]
-    },
+    }
 ];
 
 const router = createRouter({
