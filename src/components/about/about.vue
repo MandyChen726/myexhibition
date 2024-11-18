@@ -17,10 +17,7 @@ const scrollToBottom = async (frame) => {
                 </n-gi>
                 <n-gi :span="14" :offset="2">
                     <div style="font-size: 128px"><b>Hi there!</b></div>
-                    <n-text :depth="3" style="font-size: 18px">My name is Mandy Chen. Blandit ullamcorper elit hendrerit
-                        senectus adipiscing vitae. Morbi in condimentum fusce mollis gravida. Sagittis rutrum a cubilia
-                        pretium aenean sodales pellentesque? Facilisi sociosqu porttitor viverra vitae tristique
-                        adipiscing in. </n-text>
+                    <n-text :depth="3" style="font-size: 18px">My name is ...</n-text>
                     <div style="margin-top: 24px;">
                         <n-button type="primary" @click="scrollToBottom(block2)">
                             For more information

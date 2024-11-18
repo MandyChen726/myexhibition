@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHashHistory, createRouter } from "vue-router";
 import store from "../store/store";
 import Layout from "../components/Layout/layout.vue"
 import mLayout from "../components/Layout/mLayout.vue"
@@ -9,7 +9,7 @@ import about from "../components/about/about.vue"
 
 const routes = [
     {
-        path: "/myexhibition/",
+        path: "/",
         name: "early-riser",
         component: store.state.display.isMobile ? mLayout : Layout,
         children: [
@@ -38,7 +38,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
