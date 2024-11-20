@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/myexhibition/', // 替换为您的仓库名称
+  base: '/', // 替换为您的仓库名称
   build: {
     outDir: 'dist'
   }
