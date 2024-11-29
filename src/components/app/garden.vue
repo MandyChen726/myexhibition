@@ -13,6 +13,10 @@ const message = useMessage();
 
 const readyRender = ref(false);
 
+const loading = ref(false);
+
+const loading2 = ref(false);
+
 const props = defineProps({
     familyID: String,
     identity: Number,
@@ -218,16 +222,20 @@ function handleSubmitForm(e) {
     formRef.value?.validate((errors) => {
         if (!errors) {
             if (!isEditting.value) {
+                loading2.value = true;
                 RedeemService.create({ familyUID: props.familyID, ...formModel.value })
                     .then(res => {
                         items.value.push(res.data);
                         message.success("添加成功")
                         showCreateRedeemModal.value = false;
+                        loading2.value = false;
                     })
                     .catch(err => {
                         message.error(err.message)
+                        loading2.value = false;
                     })
             } else {
+                loading2.value = true;
                 RedeemService.update(curItem.value.id, props.familyID, formModel.value)
                     .then(res => {
                         const updatedRedeem = res.data;
@@ -236,10 +244,12 @@ function handleSubmitForm(e) {
                             items.value[index] = updatedRedeem;
                             message.success("修改成功")
                             showCreateRedeemModal.value = false;
+                            loading2.value = false;
                         }
                     })
                     .catch(err => {
                         message.error(err.message)
+                        loading2.value = false;
                     })
             }
         }
@@ -247,6 +257,7 @@ function handleSubmitForm(e) {
 }
 
 function handleChangeRedeemStatus() {
+    loading.value = true;
     curItem.value.status = !curItem.value.status;
     RedeemService.update(curItem.value.id, props.familyID, { status: curItem.value.status })
         .then(res => {
@@ -256,9 +267,11 @@ function handleChangeRedeemStatus() {
                 items.value[index] = updatedRedeem;
                 message.success("修改成功")
             }
+            loading.value = false;
         })
         .catch(err => {
             message.error(err.message)
+            loading.value = false
         })
 }
 
@@ -269,6 +282,7 @@ function confirmRedeem(e) {
             if (props.credit < (curItem.value.price * redeemFormModel.value.quantity)) {
                 message.error("积分不足，无法兑换")
             } else {
+                loading.value = true;
                 RecordService.create({
                     action: -(curItem.value.price * redeemFormModel.value.quantity),
                     familyUID: props.familyID,
@@ -280,6 +294,7 @@ function confirmRedeem(e) {
                         items.value[index].stock -= redeemFormModel.value.quantity;
                     }
                     emit("getCredit", props.credit - (curItem.value.price * redeemFormModel.value.quantity));
+                    loading.value = false;
                 });
                 message.success("兑换成功，请前往我的积分查看")
                 showRedeemModal.value = false;
@@ -309,25 +324,31 @@ function resetForm() {
 
 function handleOpenDrawer() {
     showDrawer.value = true;
+    loading.value = true;
     RecordService.findAllByFamilyId(props.familyID, page.value - 1)
         .then(res => {
             recordData.value = res.data.result;
             pageCount.value = res.data.pageCount;
+            loading.value = false;
         })
         .catch(err => {
             message.error(err.message)
+            loading.value = false;
         })
 }
 
 function handlePageChange(curPage) {
     page.value = curPage;
+    loading.value = true;
     RecordService.findAllByFamilyId(props.familyID, page.value - 1)
         .then(res => {
             recordData.value = res.data.result;
             pageCount.value = res.data.pageCount;
+            loading.value = false;
         })
         .catch(err => {
             message.error(err.message)
+            loading.value = false;
         })
 }
 </script>
@@ -353,7 +374,7 @@ function handlePageChange(curPage) {
                     <div style="font-size: 18px">{{ `My sunrise: ${credit} ☀️` }}</div>
                 </n-flex>
                 <n-flex>
-                    <n-button tertiary size="large" @click="handleOpenDrawer">积分记录</n-button>
+                    <n-button tertiary size="large" @click="handleOpenDrawer" :loading="loading">积分记录</n-button>
                 </n-flex>
             </n-flex>
             <n-modal :mask-closable="false" v-model:show="showRedeemModal" class="custom-card" preset="card"
@@ -383,7 +404,7 @@ function handlePageChange(curPage) {
                     <div style="text-align: center;">
                         {{ `你确定要花费 ${redeemFormModel.quantity * curItem.price} ☀️ 兑换该物品吗？` }}
                     </div>
-                    <n-button @click="confirmRedeem" type="primary">确定兑换</n-button>
+                    <n-button @click="confirmRedeem" type="primary" :loading="loading">确定兑换</n-button>
                 </n-flex>
             </n-modal>
             <n-modal :mask-closable="false" v-model:show="showCreateRedeemModal" class="custom-card" preset="card"
@@ -414,15 +435,17 @@ function handlePageChange(curPage) {
                         <n-grid :x-gap="12">
                             <n-gi v-if="isEditting" :span="12">
                                 <n-button v-if="curItem.status" style="width: 100%" type="error"
-                                    @click="handleChangeRedeemStatus">
+                                    @click="handleChangeRedeemStatus" :loading="loading">
                                     {{ "下架该兑换物" }}
                                 </n-button>
-                                <n-button v-else style="width: 100%" type="success" @click="handleChangeRedeemStatus">
+                                <n-button v-else style="width: 100%" type="success" @click="handleChangeRedeemStatus"
+                                    :loading="loading">
                                     {{ "上架该兑换物" }}
                                 </n-button>
                             </n-gi>
                             <n-gi :span="isEditting ? 12 : 24">
-                                <n-button style="width: 100%" type="primary" @click="handleSubmitForm">
+                                <n-button style="width: 100%" type="primary" @click="handleSubmitForm"
+                                    :loading="loading2">
                                     {{ !isEditting ? "确认添加" : "确认修改" }}
                                 </n-button>
                             </n-gi>
@@ -459,11 +482,21 @@ function handlePageChange(curPage) {
         <n-drawer v-model:show="showDrawer" :width="'100vw'" :placement="'right'" :inert="!showDrawer"
             :auto-focus="false">
             <n-drawer-content title="积分记录" closable>
-                <n-data-table :max-height="tableHeight" :min-height="tableHeight" :columns="columns" :data="recordData"
-                    :pagination="pagination" striped remote :on-update:page="handlePageChange"></n-data-table>
+                <n-spin :show="loading">
+                    <n-data-table :max-height="tableHeight" :min-height="tableHeight" :columns="columns"
+                        :data="recordData" :pagination="pagination" striped remote
+                        :on-update:page="handlePageChange"></n-data-table>
+                </n-spin>
             </n-drawer-content>
         </n-drawer>
     </n-layout>
+    <n-flex v-else class="gardenContainer" :justify="'center'" :align="'center'">
+        <n-flex vertical :size="24">
+            <n-spin :size="64">
+            </n-spin>
+            <div><b>LOADING...</b></div>
+        </n-flex>
+    </n-flex>
 </template>
 
 <style lang='less' scoped>

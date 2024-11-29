@@ -9,6 +9,7 @@ import store from '../../store/store';
 import { handleQuit } from './app';
 import FamilyService from '../../api/family/family.services';
 import RecordService from '../../api/record/record.services';
+import 'animate.css';
 
 const props = defineProps({
     familyID: String,
@@ -27,6 +28,10 @@ const emit = defineEmits(['getCredit', 'getStartTime', 'getEndTime', 'getHasCred
 const creditBuffer = ref(0);
 
 const creditButtonLoading = ref(false);
+
+const creditChanged = ref(false);
+
+const loading = ref(false);
 
 const startTimeBuffer = ref("07:00");
 
@@ -71,75 +76,16 @@ async function initial() {
     creditBuffer.value = props.credit;
     startTimeBuffer.value = props.startTime;
     endTimeBuffer.value = props.endTime;
-    // if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(
-    //         (position) => {
-    //             latitude.value = position.coords.latitude;
-    //             longitude.value = position.coords.longitude;
-    //             // const url = `https://api.sunrisesunset.io/json?lat=${latitude.value}&lng=${longitude.value}`
-    //             const url = `https://api.sunrisesunset.io/json?lat=${40.0577}&lng=${116.8665}`
-    //             axios.get(url).then((res) => {
-    //                 const apiData = res.data.results;
-    //                 first_light.value = parseToMilliseconds(apiData.date, apiData.first_light);
-    //                 dawn.value = parseToMilliseconds(apiData.date, apiData.dawn);
-    //                 sunrise.value = parseToMilliseconds(apiData.date, apiData.sunrise);
-    //                 sunset.value = parseToMilliseconds(apiData.date, apiData.sunset);
-    //                 dusk.value = parseToMilliseconds(apiData.date, apiData.dusk);
-    //                 last_light.value = parseToMilliseconds(apiData.date, apiData.last_light);
-    //                 if (now < first_light.value) {
-    //                     // 夜晚
-    //                     background.value = "linear-gradient(to bottom, #8A2BE2, #0B132B)";
-    //                 } else if (now < dawn.value) {
-    //                     // 黎明前
-    //                     background.value = "linear-gradient(to bottom, #0B132B, #1E3A5F)";
-    //                 } else if (now < sunrise.value) {
-    //                     // 清晨
-    //                     background.value = "linear-gradient(to bottom, #1E3A5F, #F4A261)";
-    //                 } else if (now < sunset.value) {
-    //                     // 白天
-    //                     background.value = "linear-gradient(to bottom, #FDB813, #87CEEB)";
-    //                 } else if (now < dusk.value) {
-    //                     // 傍晚
-    //                     background.value = "linear-gradient(to bottom, #F4A261, #FF4500)";
-    //                     store.state.display.theme = darkTheme; // 切换到深色主题
-    //                 } else if (now < last_light.value) {
-    //                     // 黄昏
-    //                     background.value = "linear-gradient(to bottom, #0B132B, #1E3A5F)";
-    //                 } else {
-    //                     // 夜晚
-    //                     background.value = "linear-gradient(to bottom, #8A2BE2, #0B132B)";
-    //                 }
-    //                 console.log(
-    //                     first_light.value,
-    //                     dawn.value,
-    //                     sunrise.value,
-    //                     sunset.value,
-    //                     dusk.value,
-    //                     last_light.value
-    //                 )
-    //                 readyRender.value = true;
-    //             }).catch((err) => {
-    //                 console.error(err);
-    //             });
-    //         },
-    //         (error) => {
-    //             console.error(`Error Code: ${error.code}, Message: ${error.message}`);
-    //         }
-    //     );
-    // } else {
-    //     console.error("Geolocation is not supported by this browser.");
-    // }
     readyRender.value = true;
 }
 
-function getTimeRangeFloor() {
-}
-
 function handleUpdate(action) {
+    loading.value = true;
     switch (action) {
         case 1:
             creditButtonLoading.value = true;
             creditBuffer.value++;
+            creditChanged.value = true;
             RecordService.create({ action: 1, familyUID: props.familyID })
                 .then(res => {
                     emit("getHasCredit", true);
@@ -147,6 +93,7 @@ function handleUpdate(action) {
             FamilyService.update(props.familyID, { credit: creditBuffer.value })
                 .then(res => {
                     emit("getCredit", creditBuffer.value);
+                    loading.value = false;
                 });
             break;
         case 2:
@@ -154,16 +101,16 @@ function handleUpdate(action) {
                 .then(res => {
                     emit("getStartTime", startTimeBuffer.value);
                     message.success("最早起床时间修改成功")
+                    loading.value = false;
                 });
             break;
         case 3:
-            FamilyService.update(props.familyID, { startTime: startTimeBuffer.value })
+            FamilyService.update(props.familyID, { endTime: endTimeBuffer.value })
                 .then(res => {
-                    emit("getStartTime", startTimeBuffer.value);
-                    message.success("最早起床时间修改成功")
+                    emit("getEndTime", endTimeBuffer.value);
+                    message.success("最晚起床时间修改成功")
+                    loading.value = false;
                 });
-            emit("getEndTime", endTimeBuffer.value);
-            message.success("最晚起床时间修改成功")
             break;
         default:
             break;
@@ -219,13 +166,15 @@ function endIsMinuteDisabled(minute, selectedHour) {
                 <n-gi :span="10" style="text-align: center;">
                     <n-time-picker :actions="['confirm']" :is-hour-disabled="startIsHourDisabled"
                         :is-minute-disabled="startIsMinuteDisabled" size="large" @confirm="handleUpdate(2)"
-                        v-model:formatted-value="startTimeBuffer" value-format="HH:mm" format="HH:mm" />
+                        v-model:formatted-value="startTimeBuffer" value-format="HH:mm" format="HH:mm"
+                        :disabled="loading" />
                 </n-gi>
                 <n-gi :span="4" style="text-align: center;">-</n-gi>
                 <n-gi :span="10" style="text-align: center;">
                     <n-time-picker :actions="['confirm']" :is-hour-disabled="endIsHourDisabled"
                         :is-minute-disabled="endIsMinuteDisabled" size="large" @confirm="handleUpdate(3)"
-                        v-model:formatted-value="endTimeBuffer" value-format="HH:mm" format="HH:mm" />
+                        v-model:formatted-value="endTimeBuffer" value-format="HH:mm" format="HH:mm"
+                        :disabled="loading" />
                 </n-gi>
             </n-grid>
         </n-modal>
@@ -260,7 +209,10 @@ function endIsMinuteDisabled(minute, selectedHour) {
             <n-flex :align="'center'" :justify="'center'" class="sunrise__count">
                 <div>
                     <div class="label">My Sunrise</div>
-                    <div class="value">{{ creditBuffer }}</div>
+                    <div
+                        :class="['value', creditChanged ? 'animate__animated' : undefined, creditChanged ? 'animate__rubberBand' : undefined]">
+                        {{ creditBuffer }}
+                    </div>
                 </div>
             </n-flex>
         </div>
@@ -294,10 +246,12 @@ function endIsMinuteDisabled(minute, selectedHour) {
             <n-flex :align="'center'" :justify="'center'" style="height: 100%">
                 <div v-if="identity === 2">
                     <div class="status">
-                        <n-button v-if="!hasCredit && !isLate" color="white" size="large" strong
-                            @click="handleUpdate(1)" :loading="creditButtonLoading">
-                            Catch the Sunrise
-                        </n-button>
+                        <transition>
+                            <n-button v-if="!hasCredit && !isLate" color="white" size="large" strong
+                                @click="handleUpdate(1)" :loading="creditButtonLoading">
+                                Catch the Sunrise
+                            </n-button>
+                        </transition>
                     </div>
                     <div class="infoText">
                         <div v-if="!hasCredit && !isLate">

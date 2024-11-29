@@ -149,6 +149,13 @@ function getHasCredit(data) {
             </div>
         </div>
     </div>
+    <n-flex v-else class="app__container" :justify="'center'" :align="'center'">
+        <n-flex vertical :size="24">
+            <n-spin :size="64">
+            </n-spin>
+            <div><b>LOADING...</b></div>
+        </n-flex>
+    </n-flex>
 </template>
 
 <style lang='less' scoped>
