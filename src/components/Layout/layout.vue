@@ -1,36 +1,41 @@
 <script setup>
 import { ref } from 'vue'
 import router from '../../router/router'
+import store from '../../store/store';
+
+const isApp = router.currentRoute.value.name.includes('app')
 </script>
 
 <template>
     <n-layout class="container">
-        <n-layout-header class="header">
+        <n-layout-header v-if="!isApp" class="header">
             <n-flex :align="'center'" :justify="'space-between'">
-                <n-flex :align="'center'" class="logo" @click="router.push({ name: 'early-riser-home' })">
-                    <n-avatar :width="24" src="./myexhibition/EarlyRiser/logo.jpg"></n-avatar>
+                <n-flex :align="'center'" class="logo" @click="router.push({ name: 'SunRiseGarden-home' })">
+                    <n-avatar :width="24" src="./myexhibition/SunRiseGarden/logo.jpg"></n-avatar>
                     <b>
-                        Early
-                        <span class="primaryColor">Riser</span>
+                        Mandy's Sunrise
+                        <span class="primaryColor">Garden</span>
                     </b>
                 </n-flex>
                 <n-flex :size="24">
-                    <n-button text @click="router.push({ name: 'early-riser-mission' })">
+                    <n-button text @click="router.push({ name: 'SunRiseGarden-mission' })">
                         Mission
                     </n-button>
-                    <n-button text @click="router.push({ name: 'early-riser-development' })">
+                    <n-button text @click="router.push({ name: 'SunRiseGarden-development' })">
                         Development History
                     </n-button>
-                    <n-button text @click="router.push({ name: 'early-riser-about' })">
+                    <n-button text @click="router.push({ name: 'SunRiseGarden-about' })">
                         About
                     </n-button>
                 </n-flex>
             </n-flex>
         </n-layout-header>
-        <n-layout-content>
-            <router-view />
-        </n-layout-content>
-        <n-layout-footer>
+        <n-config-provider :theme="store.state.display.theme">
+            <n-layout-content>
+                <router-view />
+            </n-layout-content>
+        </n-config-provider>
+        <n-layout-footer v-if="!isApp">
             <n-flex :justify="'center'">
                 <div>2024 Copyright © <span class="primaryColor">Mandy Chen</span>. All rights reserved.</div>
             </n-flex>

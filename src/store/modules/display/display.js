@@ -3,5 +3,6 @@ export const store = {
         isMobile: false,
         isLoading: false,
         showAuth: false,
+        theme: null,
     }),
 }

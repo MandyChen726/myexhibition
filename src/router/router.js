@@ -6,32 +6,58 @@ import home from "../components/home/home.vue"
 import mission from "../components/mission/mission.vue"
 import development from "../components/development/development.vue"
 import about from "../components/about/about.vue"
+import app from "../components/app/app.vue";
+import landing from "../components/app/landing.vue"
+import sunrise from "../components/app/sunrise.vue";
+import garden from "../components/app/garden.vue";
 
 const routes = [
     {
         path: "/",
-        name: "early-riser",
+        name: "SunRiseGarden",
         component: store.state.display.isMobile ? mLayout : Layout,
         children: [
             {
                 path: "",
-                name: "early-riser-home",
+                name: "SunRiseGarden-home",
                 component: home
             },
             {
                 path: "mission",
-                name: "early-riser-mission",
+                name: "SunRiseGarden-mission",
                 component: mission
             },
             {
                 path: "development-history",
-                name: "early-riser-development",
+                name: "SunRiseGarden-development",
                 component: development
             },
             {
                 path: "about",
-                name: "early-riser-about",
+                name: "SunRiseGarden-about",
                 component: about
+            },
+            {
+                path: "app/landing",
+                name: "SunRiseGarden-app-landing",
+                component: landing,
+            },
+            {
+                path: "app",
+                name: "SunRiseGarden-app",
+                component: app,
+                children: [
+                    {
+                        path: "",
+                        name: "SunRiseGarden-app-sunrise",
+                        component: sunrise
+                    },
+                    {
+                        path: "garden",
+                        name: "SunRiseGarden-app-garden",
+                        component: garden
+                    },
+                ]
             }
         ]
     }

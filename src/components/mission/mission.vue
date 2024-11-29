@@ -16,19 +16,22 @@ const scrollToBottom = async (frame) => {
                     <div class="slogan"><b>I REALLY<br /> WANT TO<br /> GET UP EARLY</b></div>
                 </n-gi>
                 <n-gi :span="10" :offset="2">
-                    <h2>Lorem ipsum odor amet?</h2>
-                    <p>Congue senectus viverra; augue vulputate placerat lacinia. Ante mollis aliquet proin
-                        gravida etiam. Aptent cras tortor rutrum nisi orci. Himenaeos mattis felis habitant
-                        interdum finibus a orci diam. Ligula proin efficitur et donec efficitur eros vehicula.
-                        Lobortis nibh magnis curae aenean velit maximus fringilla placerat? Nunc gravida ac interdum
-                        tempus
-                        nunc imperdiet massa class.</p>
-                    <h2>Posuere leo natoque dolor etiam?</h2>
-                    <p>Magna varius posuere proin porta suspendisse. Himenaeos fermentum pellentesque elementum
-                        a lacinia. Vivamus morbi vivamus vitae tempus dictumst platea. Placerat laoreet taciti
-                        blandit congue; dolor sociosqu neque. Potenti
-                        adipiscing non vehicula orci pretium feugiat curabitur nullam. Cras consectetur ad
-                        consectetur, sed fermentum malesuada fames nisi.</p>
+                    <h2>Why I Created This App?</h2>
+                    <p>Useless alarms, chaotic mornings—that’s my story. No matter how early I go to bed, I struggle to
+                        wake up on time, leaving my mornings in a rush. The consequences? Forgetting essentials like my
+                        laptop, notebook, or pencil case when heading out. I wanted a change—a way to wake up earlier
+                        and start my day without the stress and disarray. That’s why I created this app: to transform
+                        mornings from a frantic scramble into a smooth, productive start.</p>
+                    <h2>Why We Need This App?</h2>
+                    <p>I knew I wasn’t the only one facing this problem. Many people struggle with waking up early, even
+                        with multiple alarms blaring every few minutes. It’s not just adults—parents often feel helpless
+                        watching their kids stay up late and struggle to get out of bed, turning every morning into a
+                        battle.</p>
+                    <p>I am offering a solution for people like me, and for families dealing with these challenges. It’s
+                        not just about waking up; it’s about building a habit that transforms mornings from chaos into
+                        calm. For parents, it’s a way to help their kids develop a healthier routine without nagging.
+                        And for individuals, it’s a step toward reclaiming mornings and starting the day on the right
+                        foot.</p>
                     <n-button style="margin-top: 12px" type="primary" @click="scrollToBottom(block2)">
                         Scroll Down
                     </n-button>
@@ -57,7 +60,7 @@ const scrollToBottom = async (frame) => {
                     <n-gi :span="14">
                         <n-flex :justify="'right'">
                             <n-flex vertical>
-                                <n-image :width="560" src="./myexhibition/EarlyRiser/mission/mission_1.gif"
+                                <n-image :width="560" src="./myexhibition/SunRiseGarden/mission/mission_1.gif"
                                     preview-disabled></n-image>
                                 <n-flex :justify="'center'">
                                     <n-text :depth="3">Neque dui quam pretium matti elementum.</n-text>

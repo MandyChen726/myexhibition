@@ -11,15 +11,18 @@ const count = ref(0)
                 <n-grid style="align-items: center;">
                     <n-gi :span="12">
                         <n-flex :justify="'center'">
-                            <n-image :width="220" src="./myexhibition/EarlyRiser/home/app-home.png"
+                            <n-image :width="220" src="./myexhibition/SunRiseGarden/home/app-home.png"
                                 preview-disabled></n-image>
                         </n-flex>
                     </n-gi>
                     <n-gi :span="12">
                         <div>
-                            <div class="slogan">Lorem ipsum odor amet, consectetuer adipiscing elit. Cubilia justo proin
-                                interdum odio nec.</div>
-                            <div class="subtitle">Imperdiet ultricies nulla phasellus cubilia ultricies maecenas.</div>
+                            <div class="slogan">
+                                Your Ultimate Wake-Up Tool -
+                                Transform from a Night Owl to an Early Bird!
+                            </div>
+                            <div class="subtitle">Start your day right with our rewards-based system. Scan, score, and
+                                earn exciting prizes—make waking up a habit you’ll love!</div>
                         </div>
                         <div>
                             <n-button type="primary" class="startBtn" @click="handleDownload(block2)">
