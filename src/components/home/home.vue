@@ -24,6 +24,8 @@ const count = ref(0)
                             <div class="subtitle">Start your day right with our rewards-based system. Scan, score, and
                                 earn exciting prizes—make waking up a habit you’ll love!</div>
                         </div>
+                        <n-qr-code style="padding: 0; margin: 24px 0"
+                            :value="'https://mandychen.hillcodex.com/#/app/landing'" />
                         <div>
                             <n-button type="primary" class="startBtn" @click="handleDownload(block2)">
                                 Start Here
