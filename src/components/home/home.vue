@@ -28,7 +28,7 @@ const count = ref(0)
                             :value="'https://mandychen.hillcodex.com/#/app/landing'" />
                         <div>
                             <n-button type="primary" class="startBtn" @click="handleDownload(block2)">
-                                Start Here
+                                Scan here
                             </n-button>
                         </div>
                     </n-gi>

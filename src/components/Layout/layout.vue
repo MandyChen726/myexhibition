@@ -13,8 +13,8 @@ const isApp = router.currentRoute.value.name.includes('app')
                 <n-flex :align="'center'" class="logo" @click="router.push({ name: 'SunRiseGarden-home' })">
                     <!-- <n-avatar :width="24" src="./myexhibition/LuckyCat/logo.jpg"></n-avatar> -->
                     <b>
-                        Mandy's Sunrise
-                        <span class="primaryColor">Garden</span>
+                        Mandy's Morning
+                        <span class="primaryColor">Cat</span>
                     </b>
                 </n-flex>
                 <n-flex :size="24">

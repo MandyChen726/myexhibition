@@ -17,10 +17,32 @@ const scrollToBottom = async (frame) => {
                 </n-gi>
                 <n-gi :span="14" :offset="2">
                     <div style="font-size: 128px"><b>Hi there!</b></div>
-                    <n-text :depth="3" style="font-size: 18px">I'm Mandy Chen, a student at an international school in
-                        Beijing. I have a deep passion for both soccer and painting, and I take pride in excelling at
-                        both. Whether it's mastering new techniques on the canvas or strategizing on the soccer field,
-                        these hobbies allow me to express myself in unique and meaningful ways.</n-text>
+                    <n-p>
+                        <n-text :depth="3" style="font-size: 18px">My name is Mandy. I was born in 2011 and currently
+                            attend the British School of Beijing as an eighth grader.</n-text>
+                    </n-p>
+                    <n-p>
+                        <n-text :depth="3" style="font-size: 18px">I love painting, especially with acrylics. My
+                            favorite subjects to paint are cats because creating art helps me feel calm and relaxed.
+                            Besides painting, I enjoy playing soccer and spending time on my Nintendo Switch, where my
+                            favorite games are The Legend of Zelda and Animal Crossing. Occasionally, I also dabble in
+                            Minecraft.</n-text>
+                    </n-p>
+                    <n-p>
+                        <n-text :depth="3" style="font-size: 18px">I’m fluent in English and Chinese, though my Spanish
+                            still needs some improvement.</n-text>
+                    </n-p>
+                    <n-p>
+                        <n-text :depth="3" style="font-size: 18px">I’ve started learning how to identify user needs,
+                            sketch design drafts, and turn my ideas into real products. This experience has given me
+                            insight into the creative and practical side of product design. In the future, I aspire to
+                            become a successful entrepreneur, building great products and earning a lot of
+                            money.</n-text>
+                    </n-p>
+                    <n-p>
+                        <n-text :depth="3" style="font-size: 18px">Through my app, I hope to help users enjoy their
+                            mornings without feeling rushed or overwhelmed.</n-text>
+                    </n-p>
                     <div style="margin-top: 24px;">
                         <n-button type="primary" @click="scrollToBottom(block2)">
                             For more information

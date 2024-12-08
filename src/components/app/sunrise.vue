@@ -183,7 +183,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
         <n-flex vertical :size="12">
             <n-flex :justify="'center'">
                 <div class="luckycat">
-                    <!-- <img class="luckycatImg" src="" /> -->
+                    <img class="luckycatImg" src="/myexhibition/LuckyCat/app/luckycat/luckycat.webp" />
                     <div class="credit__display">
                         <n-flex :align="'center'" :justify="'center'" class="credit__count">
                             <div>
@@ -202,7 +202,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
                     <div v-if="identity === 2">
                         <n-flex vertical :size="12">
                             <transition>
-                                <div v-if="!hasCredit" class="status">
+                                <div v-if="!hasCredit && !isLate" class="status">
                                     <n-button color="#FFEB3B" size="large" strong @click="handleUpdate(1)"
                                         :loading="creditButtonLoading">
                                         Get Credit
@@ -213,7 +213,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
                                 <div v-if="!hasCredit && !isLate">
                                     Press this button before {{ endTimeBuffer }} each day to earn 1 credit
                                 </div>
-                                <div v-else-if="hasCredit && !isLate">
+                                <div v-else-if="hasCredit">
                                     <div style="font-size: 32px">
                                         AMAZING!<br />
                                         You made it!

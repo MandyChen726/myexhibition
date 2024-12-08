@@ -33,7 +33,7 @@ const showCreateRedeemModal = ref(false);
 
 const showRedeemModal = ref(false);
 
-const background = ref("");
+const background = ref("#ae9371");
 
 const bodyStyle = {
     width: '85vw'
@@ -359,6 +359,17 @@ function handlePageChange(curPage) {
             loading.value = false;
         })
 }
+
+function getImagePath(index) {
+    const pairIndex = index % 6;
+    const imageNumber = pairIndex + 1;
+    return `./myexhibition/LuckyCat/app/garden/luckycat${imageNumber}.webp`
+}
+
+function shouldDisplayImgs(index) {
+    const pairIndex = index % 6;
+    return pairIndex !== 4;
+}
 </script>
 
 <template>
@@ -464,6 +475,10 @@ function handlePageChange(curPage) {
             </n-modal>
             <n-grid class="itemContainer" :cols="2" :y-gap="12">
                 <n-gi class="item" v-for="(item, index) in items">
+                    <div class="luckycat" v-if="shouldDisplayImgs(index + 1)"
+                        :style="{ left: (index + 1) % 6 === 3 ? 'calc(50% + 35px)' : undefined, right: (index % 2) ? '0' : undefined }">
+                        <img :src="getImagePath(index)" />
+                    </div>
                     <div class="item"
                         :style="{ padding: `0px ${(index % 2) ? '24px' : '12px'} 24px ${(index % 2) ? '12px' : '24px'}` }">
                         <n-flex class="itemInfo" vertical>
@@ -487,6 +502,13 @@ function handlePageChange(curPage) {
                             </n-button>
                         </n-flex>
                     </div>
+                    <div style="
+                        width: 100%; 
+                        height: 24px;
+                        border-top: 2px solid #000;
+                        border-bottom: 2px solid #000;
+                        background: #a26f36;
+                    "></div>
                 </n-gi>
             </n-grid>
             <div style="height: 92px"></div>
