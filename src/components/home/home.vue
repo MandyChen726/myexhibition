@@ -11,7 +11,7 @@ const count = ref(0)
                 <n-grid style="align-items: center;">
                     <n-gi :span="12">
                         <n-flex :justify="'center'">
-                            <n-image :width="220" src="./myexhibition/SunRiseGarden/home/app-home.png"
+                            <n-image :width="220" src="./myexhibition/LuckyCat/home/app-home.webp"
                                 preview-disabled></n-image>
                         </n-flex>
                     </n-gi>

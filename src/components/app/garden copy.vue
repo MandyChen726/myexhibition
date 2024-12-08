@@ -33,7 +33,7 @@ const showCreateRedeemModal = ref(false);
 
 const showRedeemModal = ref(false);
 
-const background = ref("#ae9371");
+const background = ref("linear-gradient(to bottom, #FDB813, #87CEEB)");
 
 const bodyStyle = {
     width: '85vw'
@@ -363,8 +363,8 @@ function handlePageChange(curPage) {
 
 <template>
     <n-layout v-if="readyRender" class="gardenContainer" :style="{ background }">
-        <div>
-            <n-flex :justify="'space-between'" :align="'center'" style="padding: 24px;">
+        <div style="padding: 24px">
+            <n-flex :justify="'space-between'" :align="'center'" style="margin-bottom: 24px">
                 <n-flex v-if="identity == 1" class="mySunrise" :align="'center'" @click="handleOpenModal(1)">
                     <n-icon>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -379,11 +379,10 @@ function handlePageChange(curPage) {
                     <div style="font-size: 18px">{{ `添加` }}</div>
                 </n-flex>
                 <n-flex v-else-if="identity == 2" class="mySunrise" :align="'center'">
-                    <div style="font-size: 18px">{{ `My credit: ${credit} ☀️` }}</div>
+                    <div style="font-size: 18px">{{ `My sunrise: ${credit} ☀️` }}</div>
                 </n-flex>
                 <n-flex>
-                    <n-button type="primary" style="border-radius: 8px;" size="large" @click="handleOpenDrawer"
-                        :loading="loading">积分记录</n-button>
+                    <n-button tertiary size="large" @click="handleOpenDrawer" :loading="loading">积分记录</n-button>
                 </n-flex>
             </n-flex>
             <n-modal :mask-closable="false" v-model:show="showRedeemModal" class="custom-card" preset="card"
@@ -462,37 +461,31 @@ function handlePageChange(curPage) {
                     </n-form>
                 </n-flex>
             </n-modal>
-            <n-grid class="itemContainer" :cols="2" :y-gap="12">
-                <n-gi class="item" v-for="(item, index) in items">
-                    <div class="item"
-                        :style="{ padding: `0px ${(index % 2) ? '24px' : '12px'} 24px ${(index % 2) ? '12px' : '24px'}` }">
-                        <n-flex class="itemInfo" vertical>
-                            <n-flex class="itemImg" :align="'center'" :justify="'center'">
-                                <img :src="`./myexhibition/LuckyCat/app/garden/${item.type}.webp`"
-                                    :style="{ opacity: item.stock ? '1' : '0.4' }" />
-                                <img v-if="!item.stock" class="soldoutImg"
-                                    :src="`./myexhibition/LuckyCat/app/garden/soldout.webp`" />
-                            </n-flex>
-                            <n-flex :justify="'space-between'" :align="'center'">
-                                <n-tag :bordered="false">{{ type[item.type - 1].label }}</n-tag>
-                                <div v-if="item.status">库存: {{ item.stock }}</div>
-                                <n-tag v-else :bordered="false" type="error">已下架</n-tag>
-                            </n-flex>
-                            <div class="label">
-                                <n-ellipsis>{{ item.label }}</n-ellipsis>
-                            </div>
-                            <n-button :disabled="identity === 2 && (!item.stock || !item.status)" type="primary"
-                                class="price" strong @click="handleOpenModal(2, item)">
-                                {{ item.price + " ☀️" + (identity == 1 ? " 修改" : "") }}
-                            </n-button>
+            <n-grid class="itemContainer" :cols="2" :x-gap="24" :y-gap="24">
+                <n-gi v-for="item in items">
+                    <n-flex class="itemImg" :align="'center'" :justify="'center'">
+                        <img :src="`./myexhibition/LuckyCat/app/garden/${item.type}.webp`"
+                            :style="{ opacity: item.stock ? '1' : '0.4' }" />
+                        <img v-if="!item.stock" class="soldoutImg"
+                            :src="`./myexhibition/LuckyCat/app/garden/soldout.webp`" />
+                    </n-flex>
+                    <n-flex class="itemInfo" vertical>
+                        <n-flex :justify="'space-between'" :align="'center'">
+                            <n-tag :bordered="false" style="opacity: 0.5;">{{ type[item.type - 1].label }}</n-tag>
+                            <div v-if="item.status">库存: {{ item.stock }}</div>
+                            <n-tag v-else :bordered="false" type="error">已下架</n-tag>
                         </n-flex>
-                    </div>
-                    <div
-                        style="width: 100%; height: 24px; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #a26f36;">
-                    </div>
+                        <div class="label">
+                            <n-ellipsis>{{ item.label }}</n-ellipsis>
+                        </div>
+                        <n-button :disabled="identity === 2 && (!item.stock || !item.status)" type="primary"
+                            class="price" strong @click="handleOpenModal(2, item)">
+                            {{ item.price + " ☀️" + (identity == 1 ? " 修改" : "") }}
+                        </n-button>
+                    </n-flex>
                 </n-gi>
             </n-grid>
-            <div style="height: 92px"></div>
+            <div style="height: 160px"></div>
         </div>
         <n-drawer v-model:show="showDrawer" :width="'100vw'" :placement="'right'" :inert="!showDrawer"
             :auto-focus="false">
@@ -522,33 +515,14 @@ function handlePageChange(curPage) {
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(15px);
-        padding: 6px 18px;
+        padding: 12px;
     }
 
     .itemContainer {
         width: 100%;
 
-        .item {
-            position: relative;
-
-            .luckycat {
-                position: absolute;
-                z-index: 5;
-                bottom: 20px;
-
-                img {
-                    height: 160px;
-                }
-            }
-        }
-
         .itemInfo {
-            background: #ffffffeb;
-            position: relative;
             margin-top: 12px;
-            z-index: 10;
-            border-radius: 8px;
-            padding: 8px;
 
             .label {
                 font-size: 18px;
@@ -565,9 +539,9 @@ function handlePageChange(curPage) {
 .itemImg {
     width: 100%;
     aspect-ratio: 1 / 1;
+    background: #00000010;
     border-radius: 12px;
     position: relative;
-    z-index: 10;
 
     img {
         width: 80%;

@@ -14,7 +14,7 @@ const familyID = ref(null);
 
 const stage = ref(0);
 
-const identity = ref(0);
+const identity = ref(0); // 1: parent 2: child
 
 const loading = ref(false);
 
@@ -69,18 +69,14 @@ function handleIdentityContinue() {
 }
 
 function handleCreateFamilyID() {
-    familyID.value = generateRandom4DigitID();
     loading.value = true;
-    FamilyServices.create({ familyUID: familyID.value, credit: 0, startTime: "07:00", endTime: "07:30" })
+    FamilyServices.create({ credit: 0, startTime: "07:00", endTime: "07:30" })
         .then(res => {
             localStorage.setItem("familyID", res.data.familyUID);
+            familyID.value = res.data.familyUID;
             stage.value = 1;
             loading.value = false;
         })
-}
-
-function generateRandom4DigitID() {
-    return Math.floor(1000 + Math.random() * 9000);
 }
 
 function isFourDigitNumber(familyID) {
@@ -93,40 +89,12 @@ function isFourDigitNumber(familyID) {
         <div v-if="!stage" class="landingContainer">
             <div class="banner">
                 <div class="view">
-                    <div class="sky">
-                        <div class="sun"></div>
-                        <div class="ground"></div>
-                        <div class="family">
-                            <n-icon :size="12">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96c-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54c-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </n-icon>
-                            <n-icon :size="32">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M16 4c0-1.11.89-2 2-2s2 .89 2 2s-.89 2-2 2s-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18.06 7h-.12a2 2 0 0 0-1.9 1.37l-.86 2.58c1.08.6 1.82 1.73 1.82 3.05v8h3zm-7.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2s-2 .89-2 2s.89 2 2 2zm2 16v-7H9V9c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v6h1.5v7h4zm6.5 0v-4h1v-4c0-.82-.68-1.5-1.5-1.5h-2c-.82 0-1.5.68-1.5 1.5v4h1v4h3z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </n-icon>
-                            <n-icon :size="12">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96c-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54c-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16z"
-                                        fill="currentColor"></path>
-                                </svg>
-                            </n-icon>
-                        </div>
-                    </div>
+                    <div class="background"></div>
+                    <div class="sky"></div>
                 </div>
             </div>
-            <n-flex class="userInput" :align="'center'">
-                <n-flex style="width: 100%; margin-top: -128px" vertical :size="24">
+            <n-flex class="userInput">
+                <n-flex style="width: 100%; margin-top: 48px" vertical :size="24">
                     <div class="formLabel"><b>Join a Family</b></div>
                     <div>
                         <n-input size="large" maxlength="4" :allow-input="onlyAllowNumber" v-model:value="familyID"
@@ -204,48 +172,28 @@ function isFourDigitNumber(familyID) {
         height: 30%;
 
         .view {
-            padding: 24px;
             height: 100%;
+            position: relative;
 
-            .sky {
-                border-radius: 24px;
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
+                background-image: url('/myexhibition/LuckyCat/app/garden/luckycatpattern.webp');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .sky {
                 position: relative;
-                background: linear-gradient(to bottom, #B0E2FF, #87CEFA 50%, #4682B4);
-
-                .sun {
-                    position: absolute;
-                    width: 128px;
-                    height: 128px;
-                    left: calc(15%);
-                    top: calc(50% - 64px);
-                    background: radial-gradient(circle, #FDB813, #FFB347);
-                    border-radius: 50%;
-                    z-index: 10;
-                    box-shadow: 0 0 40px 10px #ffb84dcc,
-                        0 0 80px 20px #ff993399;
-                    filter: brightness(1.2);
-                }
-
-                .ground {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    height: 25%;
-                    background: #00a133;
-                    border-radius: 50% 50% 24px 24px;
-                    z-index: 15;
-                }
-
-                .family {
-                    width: 100%;
-                    position: absolute;
-                    bottom: 50px;
-                    left: 15%;
-                    text-align: center;
-                    z-index: 20;
-                }
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: var(--boxShadow-light);
             }
         }
     }

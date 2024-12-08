@@ -11,7 +11,7 @@ const isApp = router.currentRoute.value.name.includes('app')
         <n-layout-header v-if="!isApp" class="header">
             <n-flex :align="'center'" :justify="'space-between'">
                 <n-flex :align="'center'" class="logo" @click="router.push({ name: 'SunRiseGarden-home' })">
-                    <n-avatar :width="24" src="./myexhibition/SunRiseGarden/logo.jpg"></n-avatar>
+                    <!-- <n-avatar :width="24" src="./myexhibition/LuckyCat/logo.jpg"></n-avatar> -->
                     <b>
                         Mandy's Sunrise
                         <span class="primaryColor">Garden</span>

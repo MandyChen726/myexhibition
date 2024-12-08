@@ -32,13 +32,13 @@ const scrollToBottom = async (frame) => {
                         calm. For parents, it’s a way to help their kids develop a healthier routine without nagging.
                         And for individuals, it’s a step toward reclaiming mornings and starting the day on the right
                         foot.</p>
-                    <n-button style="margin-top: 12px" type="primary" @click="scrollToBottom(block2)">
+                    <!-- <n-button style="margin-top: 12px" type="primary" @click="scrollToBottom(block2)">
                         Scroll Down
-                    </n-button>
+                    </n-button> -->
                 </n-gi>
             </n-grid>
         </n-flex>
-        <div ref="block2">
+        <!-- <div ref="block2">
             <n-flex class="block2" :align="'center'">
                 <n-grid class="block2__inner">
                     <n-gi :span="10">
@@ -60,7 +60,7 @@ const scrollToBottom = async (frame) => {
                     <n-gi :span="14">
                         <n-flex :justify="'right'">
                             <n-flex vertical>
-                                <n-image :width="560" src="./myexhibition/SunRiseGarden/mission/mission_1.gif"
+                                <n-image :width="560" src="./myexhibition/LuckyCat/mission/mission_1.gif"
                                     preview-disabled></n-image>
                                 <n-flex :justify="'center'">
                                     <n-text :depth="3">Neque dui quam pretium matti elementum.</n-text>
@@ -70,7 +70,7 @@ const scrollToBottom = async (frame) => {
                     </n-gi>
                 </n-grid>
             </n-flex>
-        </div>
+        </div> -->
     </div>
 </template>
 

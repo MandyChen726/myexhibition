@@ -45,6 +45,31 @@ const bodyStyle = {
     width: '85vw'
 }
 
+const background = ref("linear-gradient(to bottom, #FDB813, #87CEEB)");
+
+const latitude = ref("");
+
+const longitude = ref("");
+
+const now = 1732316893000;
+
+const first_light = ref(0);
+
+const dawn = ref(0);
+
+const sunrise = ref(0);
+
+const sunset = ref(0);
+
+const dusk = ref(0);
+
+const last_light = ref(0);
+
+const parseToMilliseconds = (date, time) => {
+    const dateTimeString = `${date} ${time}`;
+    return new Date(dateTimeString).getTime();
+};
+
 initial();
 
 async function initial() {
@@ -134,7 +159,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
 </script>
 
 <template>
-    <div v-if="readyRender" class="sky">
+    <div v-if="readyRender" class="sky" :style="{ background }">
         <n-modal v-model:show="showTimeRangeModal" class="custom-card" preset="card" :style="bodyStyle" title="设置起床时间"
             size="huge" :bordered="false" :auto-focus="false">
             <n-grid style="align-items: center;">
@@ -180,57 +205,69 @@ function endIsMinuteDisabled(minute, selectedHour) {
                 </n-icon>
             </n-flex>
         </n-flex>
-        <n-flex vertical :size="12">
-            <n-flex :justify="'center'">
-                <div class="luckycat">
-                    <!-- <img class="luckycatImg" src="" /> -->
-                    <div class="credit__display">
-                        <n-flex :align="'center'" :justify="'center'" class="credit__count">
-                            <div>
-                                <div class="label">Current Credit</div>
-                                <div
-                                    :class="['value', creditChanged ? 'animate__animated' : undefined, creditChanged ? 'animate__rubberBand' : undefined]">
-                                    {{ creditBuffer }}
-                                </div>
-                            </div>
-                        </n-flex>
+        <div class="sun">
+            <n-flex :align="'center'" :justify="'center'" class="sunrise__count">
+                <div>
+                    <div class="label">My Sunrise</div>
+                    <div
+                        :class="['value', creditChanged ? 'animate__animated' : undefined, creditChanged ? 'animate__rubberBand' : undefined]">
+                        {{ creditBuffer }}
                     </div>
                 </div>
             </n-flex>
-            <div class="UIBlock">
-                <n-flex :justify="'center'" style="height: 100%">
-                    <div v-if="identity === 2">
-                        <n-flex vertical :size="12">
-                            <transition>
-                                <div v-if="!hasCredit" class="status">
-                                    <n-button color="#FFEB3B" size="large" strong @click="handleUpdate(1)"
-                                        :loading="creditButtonLoading">
-                                        Get Credit
-                                    </n-button>
-                                </div>
-                            </transition>
-                            <div class="infoText">
-                                <div v-if="!hasCredit && !isLate">
-                                    Press this button before {{ endTimeBuffer }} each day to earn 1 credit
-                                </div>
-                                <div v-else-if="hasCredit && !isLate">
-                                    <div style="font-size: 32px">
-                                        AMAZING!<br />
-                                        You made it!
-                                    </div>
-                                </div>
-                                <div v-else-if="!hasCredit && isLate">
-                                    <div style="font-size: 32px">See you in the morning!</div>
-                                    <n-text :depth="3">
-                                        Come back between {{ startTimeBuffer }} and {{ endTimeBuffer }}
-                                    </n-text>
-                                </div>
-                            </div>
-                        </n-flex>
+        </div>
+        <div class="ground"></div>
+        <div class="family">
+            <n-icon :size="18">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 512 512">
+                    <path
+                        d="M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96c-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54c-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16z"
+                        fill="currentColor"></path>
+                </svg>
+            </n-icon>
+            <n-icon :size="64">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                    <path
+                        d="M16 4c0-1.11.89-2 2-2s2 .89 2 2s-.89 2-2 2s-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18.06 7h-.12a2 2 0 0 0-1.9 1.37l-.86 2.58c1.08.6 1.82 1.73 1.82 3.05v8h3zm-7.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2s-2 .89-2 2s.89 2 2 2zm2 16v-7H9V9c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v6h1.5v7h4zm6.5 0v-4h1v-4c0-.82-.68-1.5-1.5-1.5h-2c-.82 0-1.5.68-1.5 1.5v4h1v4h3z"
+                        fill="currentColor"></path>
+                </svg>
+            </n-icon>
+            <n-icon :size="18">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 512 512">
+                    <path
+                        d="M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96c-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54c-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16s16 7.16 16 16s-7.16 16-16 16z"
+                        fill="currentColor"></path>
+                </svg>
+            </n-icon>
+        </div>
+        <div class="UIBlock">
+            <n-flex :align="'center'" :justify="'center'" style="height: 100%">
+                <div v-if="identity === 2">
+                    <div class="status">
+                        <transition>
+                            <n-button v-if="!hasCredit && !isLate" color="white" size="large" strong
+                                @click="handleUpdate(1)" :loading="creditButtonLoading">
+                                Catch the Sunrise
+                            </n-button>
+                        </transition>
                     </div>
-                </n-flex>
-            </div>
-        </n-flex>
+                    <div class="infoText">
+                        <div v-if="!hasCredit && !isLate">
+                            Press this button before {{ endTimeBuffer }} every day to catch the sunrise!
+                        </div>
+                        <div v-else-if="hasCredit">
+                            Today's sunrise has been added to your sunrise count that you can use to harvest stuff later
+                        </div>
+                        <div v-else-if="!hasCredit && isLate">
+                            Come back between {{ startTimeBuffer }} and {{ endTimeBuffer }} every day to catch the
+                            sunrise!
+                        </div>
+                    </div>
+                </div>
+            </n-flex>
+        </div>
     </div>
 </template>
 
@@ -247,64 +284,82 @@ function endIsMinuteDisabled(minute, selectedHour) {
 
     .settingBlock {
         border-radius: 8px;
-        background: rgba(138, 138, 138, 0.1);
+        background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(15px);
         padding: 12px;
         margin: 24px;
     }
 
-    .luckycat {
-        position: relative;
-        width: 80%;
-        aspect-ratio: 1 / 1.45;
+    .sun {
+        position: absolute;
+        left: calc(50% - 160px);
+        top: calc(50% - 160px - 61px - 48px);
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, #FDB813, #FFB347);
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 0 40px 10px #ffb84dcc,
+            0 0 80px 20px #ff993399;
+        filter: brightness(1.2);
 
-        .luckycatImg {
-            width: 100%;
+        .sunrise__count {
             height: 100%;
-        }
+            text-align: center;
+            line-height: 1;
+            margin-top: -12px;
 
-        .credit__display {
-            position: absolute;
-            bottom: 0;
-            width: 83%;
-            left: calc(9%);
-            aspect-ratio: 1 / 1;
+            .label {
+                font-size: 24px;
+            }
 
-            .credit__count {
-                height: 100%;
-                text-align: center;
-                line-height: 1;
-                margin-top: -4px;
-
-                .label {
-                    font-size: 18px;
-                }
-
-                .value {
-                    font-size: 18vw;
-                    font-weight: bold;
-                }
+            .value {
+                font-size: 128px;
+                font-weight: bold;
             }
         }
     }
 
-    .UIBlock {
+    .ground {
+        position: absolute;
+        bottom: 0;
+        width: 200%;
+        left: -50%;
+        height: 50%;
+        background: #00a133;
+        border-radius: 50% 50% 0 0;
+        z-index: 15;
+    }
+
+    .family {
+        height: calc(50% - 122px + 24px);
         width: 100%;
+        position: absolute;
+        bottom: 122px;
         text-align: center;
+        z-index: 20;
+    }
+
+    .UIBlock {
+        height: calc(50% - 122px);
+        width: 100%;
+        position: absolute;
+        bottom: 122px;
+        text-align: center;
+        color: white;
         z-index: 20;
 
         .status {
             .n-button {
-                font-size: 32px;
                 color: #000;
+                font-size: 32px;
                 padding: 32px 24px;
-                box-shadow: var(--boxShadow-regular);
-                border-radius: 12px;
             }
         }
 
         .infoText {
-            font-size: 18px;
+            font-size: 20px;
+            margin-top: 12px;
             padding: 0 24px;
         }
     }
