@@ -33,7 +33,7 @@ const showCreateRedeemModal = ref(false);
 
 const showRedeemModal = ref(false);
 
-const background = ref("#ae9371");
+const background = ref("");
 
 const bodyStyle = {
     width: '85vw'
@@ -486,9 +486,6 @@ function handlePageChange(curPage) {
                                 {{ item.price + " ☀️" + (identity == 1 ? " 修改" : "") }}
                             </n-button>
                         </n-flex>
-                    </div>
-                    <div
-                        style="width: 100%; height: 24px; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #a26f36;">
                     </div>
                 </n-gi>
             </n-grid>
