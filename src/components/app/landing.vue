@@ -190,9 +190,7 @@ function isFourDigitNumber(familyID) {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(255, 255, 255, 0.3);
                 backdrop-filter: blur(2px);
-                -webkit-backdrop-filter: blur(20px);
                 box-shadow: var(--boxShadow-light);
             }
         }
