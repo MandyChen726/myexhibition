@@ -87,6 +87,14 @@ const router = createRouter({
     routes,
 });
 
+router.beforeEach((to, from, next) => {
+    if (to.name === 'Mandy') {
+        next({ name: 'Exhibition' });
+    } else {
+        next();
+    }
+});
+
 router.afterEach(() => {
     window.scrollTo(0, 0)
 })

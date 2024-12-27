@@ -10,6 +10,10 @@ const props = defineProps({
 
 const readyRender = ref(false);
 
+if (props.curArtwork) {
+    initial();
+}
+
 watch(() => props.curArtwork, newVal => {
     readyRender.value = false;
     setTimeout(() => {

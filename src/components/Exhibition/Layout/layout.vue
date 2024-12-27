@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import router from '../../../router/router'
 import store from '../../../store/store';
 import axios from 'axios';
@@ -14,7 +14,7 @@ async function initial() {
     const buffer = await readJSON();
     artworks.value = buffer.data;
     if (!router.currentRoute.value.params.artworkKey) {
-        router.replace({ name: "Exhibition-artwork", params: { artworkKey: buffer.data[0].key } })
+        router.push({ name: "Exhibition-artwork", params: { artworkKey: buffer.data[0].key } })
         curArtwork.value = buffer.data[0]
     } else {
         curArtwork.value = artworks.value.find(a => a.key === router.currentRoute.value.params.artworkKey)
