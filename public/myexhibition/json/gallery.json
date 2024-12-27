@@ -1,0 +1,670 @@
+[
+    {
+        "id": 1,
+        "label": "Nameless",
+        "key": "nameless",
+        "paintingURL": "./myexhibition/gallery/Nameless.JPG",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Green and Blue",
+            "Thick Brush Strokes",
+            "Abstract",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Efficitur aliquet facilisi integer inceptos; hac ullamcorper purus ipsum. Semper tristique vehicula dictumst etiam quam. Congue habitasse imperdiet ultricies lacus felis est eget. Egestas eros gravida congue faucibus lectus hac cubilia libero class. Facilisi libero quam platea maximus volutpat lacinia suscipit eleifend. Sociosqu duis vestibulum sem neque ante sed. Neque euismod ad mauris curae conubia quam nibh. Commodo viverra eros morbi ad, malesuada est maximus est. Libero bibendum ridiculus elit platea felis malesuada."
+    },
+    {
+        "id": 2,
+        "label": "Harry Edward Kane - Casual",
+        "key": "Harry-Edward-Kane-Casual",
+        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Casual.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Light Green and White",
+            "Realistic",
+            "Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Dictum elit lectus nam, senectus odio dapibus ridiculus. Mauris curae aptent et malesuada sit vitae efficitur congue? Euismod facilisis consequat sociosqu mi, scelerisque sollicitudin. Conubia primis volutpat habitasse ex sem congue sodales."
+    },
+    {
+        "id": 3,
+        "label": "Harry Edward Kane - Sketch",
+        "key": "Harry-Edward-Kane-Sketch",
+        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Sketch.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Ballpoint Pen Sketch"
+        ],
+        "left": true,
+        "description": "Nisl penatibus congue fusce ipsum torquent quis duis habitasse pulvinar. Nostra hendrerit id leo quam vestibulum blandit risus et. Efficitur elementum litora sit potenti torquent congue gravida lorem."
+    },
+    {
+        "id": 4,
+        "label": "Harry Edward Kane - King",
+        "key": "Harry-Edward-Kane-King",
+        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-King.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Deep Blue and Gold",
+            "Realistic",
+            "Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Vivamus sodales per consectetur netus per conubia himenaeos. Habitant per cras cubilia nostra adipiscing. Orci conubia leo tellus efficitur taciti mus. Hendrerit natoque molestie sociosqu sollicitudin; platea gravida est. Elit odio a elit congue pretium vulputate molestie. Ultricies mollis massa risus dolor conubia nunc sagittis. Lacus iaculis nostra nec sociosqu ultrices cubilia. Iaculis dignissim mollis felis taciti dolor placerat suscipit turpis. Aliquet congue cras eget magna dui finibus. Tristique nisi lectus arcu tellus luctus tempor."
+    },
+    {
+        "id": 5,
+        "label": "Rice - Relaxed",
+        "key": "Rice-Relaxed",
+        "paintingURL": "./myexhibition/gallery/Rice-Relaxed.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Blue and Pink",
+            "Small Orange Brush Strokes",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Eleifend elit ornare aliquet augue nostra adipiscing habitant. Egestas montes sed laoreet est facilisi volutpat. Etiam habitasse curabitur fermentum euismod hac. Id dignissim faucibus felis conubia posuere elit curae. Cubilia mi posuere nulla accumsan himenaeos risus libero ante. Sem inceptos facilisi; hendrerit consequat urna integer venenatis tempor. Inceptos sit tristique tellus quis habitasse gravida bibendum viverra placerat. Interdum velit enim euismod facilisi auctor."
+    },
+    {
+        "id": 6,
+        "label": "Rice - Arrogant",
+        "key": "Rice-Arrogant",
+        "paintingURL": "./myexhibition/gallery/Rice-Arrogant.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Purple and Pink",
+            "Small Orange Brush Strokes",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Lectus suscipit integer sodales proin, nulla tempus. Suspendisse nunc velit ridiculus interdum eros penatibus donec tincidunt potenti. Erat lacinia nisl etiam eros rhoncus donec! Feugiat condimentum rutrum integer hendrerit imperdiet cursus laoreet primis. Faucibus cras consequat condimentum facilisis litora. Donec aptent ante nullam nostra sodales vehicula mattis donec proin. Consequat tempor malesuada porta egestas maximus. Arcu finibus torquent ligula feugiat eros. Nullam nisl cubilia volutpat nullam rhoncus euismod neque pretium. Rhoncus imperdiet porta tempor arcu tempor urna magnis. Sagittis efficitur maximus sodales dapibus magna at cursus. Velit malesuada ante dis in praesent. Vivamus ultrices elementum sapien maximus curabitur fusce sem quis. Ipsum eu ligula volutpat nisl placerat sodales."
+    },
+    {
+        "id": 7,
+        "label": "Rice - Stare",
+        "key": "Rice-Stare",
+        "paintingURL": "./myexhibition/gallery/Rice-Stare.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Purple and Turquoise",
+            "Orange Brush Strokes",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Lorem ipsum odor amet, consectetuer adipiscing elit. Fringilla vitae pulvinar finibus hendrerit rutrum lectus eros sed dapibus. Est quis platea gravida; quis maecenas magna ad. Pulvinar ligula nisi hendrerit ad porttitor libero urna consequat neque. Est convallis tristique fringilla feugiat aliquam sapien; at vel. Feugiat aliquet nec erat pharetra a quis. Tellus molestie leo maximus lectus leo mus magnis sociosqu dui. Dui semper eros donec integer potenti suscipit justo."
+    },
+    {
+        "id": 8,
+        "label": "Ding Ding",
+        "key": "Ding-Ding",
+        "paintingURL": "./myexhibition/gallery/Ding-Ding.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Brown",
+            "Orange Brush Strokes",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Penatibus ante adipiscing nostra commodo neque nibh. Phasellus augue eu, urna dui nisi varius eget. Id morbi libero finibus quisque maximus sed congue platea neque. Pretium luctus eros, pretium erat ante augue tempus enim molestie. Aenean metus nostra elit litora ultricies aptent rutrum. Quisque justo netus tempor erat vivamus sem mus. Nunc risus nullam eu augue maecenas torquent fringilla mauris. Gravida tempus sem quisque sagittis placerat. Mus fermentum montes efficitur ultrices suspendisse purus quam pulvinar faucibus."
+    },
+    {
+        "id": 9,
+        "label": "Songshan's Animals - Sketch",
+        "key": "Songshan-Animals-Sketch",
+        "paintingURL": "./myexhibition/gallery/Songshan-Animals-Sketch.jpg",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Pencil Sketch"
+        ],
+        "left": true,
+        "description": "Dictum condimentum bibendum ornare, ipsum rhoncus tempor consequat. Rutrum ante molestie etiam nascetur morbi et libero justo."
+    },
+    {
+        "id": 10,
+        "label": "Rice - Elegant",
+        "key": "Rice-Elegant",
+        "paintingURL": "./myexhibition/gallery/Rice-Elegant.jpg",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Light Green and Linen",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Cursus fames quis natoque nostra fermentum. Ac ipsum rutrum class nibh sem faucibus blandit. Finibus torquent sollicitudin habitant aenean pharetra ultricies. Sed magna feugiat lobortis dictumst odio. Dignissim torquent dui hac rutrum montes habitant; posuere et aptent. Penatibus nostra efficitur platea aliquam, sociosqu dolor aenean consequat. Aenean adipiscing praesent aenean massa praesent natoque luctus."
+    },
+    {
+        "id": 11,
+        "label": "Nana",
+        "key": "Nana",
+        "paintingURL": "./myexhibition/gallery/Nana.jpg",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Gray and Emerald",
+            "Realistic",
+            "Pet Portrait",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Platea semper cursus nec ultrices nulla amet pharetra condimentum blandit. Urna lacus lectus adipiscing diam fusce euismod auctor facilisis senectus. Ullamcorper ultrices consequat dictum per mattis ex. Blandit dis eleifend dapibus dapibus class egestas mattis suspendisse. Nec class eu platea duis taciti ex dis rhoncus. Class rutrum nascetur maecenas iaculis lorem finibus turpis magna. Faucibus inceptos id laoreet quam neque dis a volutpat. Habitasse donec turpis lobortis nunc tincidunt. Donec consectetur netus cursus interdum nam porttitor auctor."
+    },
+    {
+        "id": 12,
+        "label": "Cat - Cartoon",
+        "key": "Cat-Cartoon",
+        "paintingURL": "./myexhibition/gallery/Cat-Cartoon.jpg",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "30 × 43.3 CM",
+            "11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Yellow",
+            "Cartoon",
+            "Cat",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Phasellus parturient ante maximus efficitur taciti rhoncus. Id interdum natoque malesuada vehicula morbi aliquam malesuada magnis. Velit ornare aliquam tellus augue nullam felis tortor. Consectetur pretium fames erat ridiculus vehicula felis scelerisque rhoncus nec. Porta id pretium egestas nostra vulputate morbi suspendisse ultrices."
+    },
+    {
+        "id": 13,
+        "label": "Cat - Distorted",
+        "key": "Cat-Distorted",
+        "paintingURL": "./myexhibition/gallery/Cat-Distorted.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Pink and Gray",
+            "Abstract",
+            "Cat",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Netus facilisis lorem a velit gravida est. Dui donec non auctor neque elementum nec mi lacus. Sem curabitur eget himenaeos placerat taciti posuere turpis. Tristique nostra integer velit phasellus dictum eget justo auctor. Facilisi luctus potenti ex nunc ad tincidunt aenean."
+    },
+    {
+        "id": 14,
+        "label": "The Last Time",
+        "key": "The-Last-Time",
+        "paintingURL": "./myexhibition/gallery/The-Last-Time.JPG",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Blue and Gray",
+            "The Legend of Zelda",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Purus fringilla placerat, auctor tortor cubilia suscipit. Arcu efficitur lacinia mauris duis curabitur semper. Blandit varius quam placerat class blandit vivamus et sollicitudin."
+    },
+    {
+        "id": 15,
+        "label": "Hyrule",
+        "key": "Hyrule",
+        "paintingURL": "./myexhibition/gallery/Hyrule.JPG",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "30 × 43.3  CM",
+            " 11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Green and Blue",
+            "The Legend of Zelda",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Tristique faucibus class, ex semper vehicula mus netus fermentum pellentesque. Eros feugiat feugiat suspendisse quam commodo mattis."
+    },
+    {
+        "id": 16,
+        "label": "Backers",
+        "key": "Backers",
+        "paintingURL": "./myexhibition/gallery/Backers.jpg",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Green, Gray, and Yellow",
+            "The Legend of Zelda",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Ornare quam quis magna ante velit cursus semper. Facilisis laoreet lobortis posuere erat velit ligula. Sit ut parturient varius luctus scelerisque molestie venenatis dis."
+    },
+    {
+        "id": 17,
+        "label": "Sunset",
+        "key": "Sunset",
+        "paintingURL": "./myexhibition/gallery/Sunset.jpg",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "43.3 × 43.3 CM",
+            "17 1/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Red and Deep Blue",
+            "The Legend of Zelda",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Consectetur fermentum magnis eu platea vehicula ac egestas. Consequat cursus lacinia ridiculus scelerisque dolor habitant; congue litora integer. Integer ut consequat montes sit parturient."
+    },
+    {
+        "id": 18,
+        "label": "Landscape",
+        "key": "Landscape",
+        "paintingURL": "./myexhibition/gallery/Landscape.jpg",
+        "span": [
+            9,
+            15
+        ],
+        "size": [
+            "30 × 43.3  CM",
+            "11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Amet conubia auctor enim vel feugiat ipsum nulla amet. Vehicula aliquam pulvinar pellentesque cubilia maecenas. Proin class bibendum turpis commodo ut. Integer lectus posuere habitasse vulputate maximus commodo vulputate nulla himenaeos."
+    },
+    {
+        "id": 19,
+        "label": "Family",
+        "key": "Family",
+        "paintingURL": "./myexhibition/gallery/Family.jpg",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "30 × 43.3  CM",
+            "11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Red",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Amet conubia auctor enim vel feugiat ipsum nulla amet. Vehicula aliquam pulvinar pellentesque cubilia maecenas. Proin class bibendum turpis commodo ut. Integer lectus posuere habitasse vulputate maximus commodo vulputate nulla himenaeos. Gravida magna vivamus senectus id suspendisse tortor. Semper magna potenti dis donec semper purus ridiculus. At justo in nisl ligula semper magnis, lorem urna mus. Urna natoque praesent in suspendisse phasellus nullam a finibus quisque. Egestas velit ultricies morbi convallis magna. Urna habitasse pretium montes, nibh nec primis vitae porta feugiat."
+    },
+    {
+        "id": 20,
+        "label": "Islet",
+        "key": "Islet",
+        "paintingURL": "./myexhibition/gallery/Islet.JPG",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "30 × 43.3  CM",
+            "11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Green and Blue",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Odio sapien consequat nostra maximus nunc eros per metus. Integer faucibus quam proin, mus nec proin. Elementum enim pretium facilisi cras; class torquent ante."
+    },
+    {
+        "id": 21,
+        "label": "This Fox and That Dinosaur",
+        "key": "This-Fox-And-That-Dinosaur",
+        "paintingURL": "./myexhibition/gallery/This-Fox-And-That-Dinosaur.JPG",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Blue and Brown",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Facilisis commodo risus taciti lacinia finibus. Feugiat fames cras proin nascetur phasellus facilisi lobortis. Donec tempor adipiscing senectus amet adipiscing posuere imperdiet luctus. Facilisis praesent turpis varius nullam massa fames metus."
+    },
+    {
+        "id": 22,
+        "label": "Charmander",
+        "key": "Charmander",
+        "paintingURL": "./myexhibition/gallery/Charmander.jpg",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Gray and Red",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Volutpat purus et suspendisse aliquet ac nostra fringilla montes? Per proin aptent et himenaeos convallis et accumsan augue porttitor. Nam adipiscing dolor malesuada suspendisse, condimentum congue porttitor."
+    },
+    {
+        "id": 23,
+        "label": "Giraffe",
+        "key": "Giraffe",
+        "paintingURL": "./myexhibition/gallery/Giraffe.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Blue and Yellow",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Praesent massa pulvinar massa pulvinar odio praesent class finibus. Natoque hac massa convallis, libero mi ex viverra nisl duis. Tristique donec eros imperdiet; ultricies cubilia rhoncus habitasse lectus. Platea laoreet ultricies sed eget aliquet sociosqu consequat auctor. Himenaeos consectetur cubilia lacinia lacus gravida."
+    },
+    {
+        "id": 24,
+        "label": "Pick Up",
+        "key": "Pick-Up",
+        "paintingURL": "./myexhibition/gallery/Pick-Up.JPG",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            " 30 × 43.3 CM",
+            " 11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "Blue and Yellow",
+            "Realistic",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "Dis neque maximus et tempor lacus commodo nec? Purus arcu nisl facilisis ultrices imperdiet litora elementum blandit. Pulvinar sapien mollis per nibh tempus."
+    },
+    {
+        "id": 25,
+        "label": "Cat - Sketch",
+        "key": "Cat-Sketch",
+        "paintingURL": "./myexhibition/gallery/Cat-Sketch.jpg",
+        "span": [
+            9,
+            15
+        ],
+        "size": [
+            " 30 × 43.3 CM",
+            " 11 13/16 × 17 1/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Pencil Sketch"
+        ],
+        "left": true,
+        "description": "Lectus pellentesque porta sed duis sem malesuada cursus efficitur ac. Lectus gravida habitant ut netus fames quis? "
+    },
+    {
+        "id": 26,
+        "label": "The Calico of Longmen Grottoes",
+        "key": "the-Calico-of-Longmen-Grottoes",
+        "paintingURL": "./myexhibition/gallery/the-Calico-of-Longmen-Grottoes.jpg",
+        "span": [
+            14,
+            10
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Pencil Sketch"
+        ],
+        "left": true,
+        "description": "Volutpat phasellus faucibus blandit fusce iaculis, class luctus id ullamcorper. Aliquam lacus ridiculus inceptos risus fringilla tempus maximus neque."
+    },
+    {
+        "id": 27,
+        "label": "Laboratory - Sketch",
+        "key": "Laboratory-Sketch",
+        "paintingURL": "./myexhibition/gallery/Laboratory-Sketch.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Ballpoint Pen Sketch"
+        ],
+        "left": true,
+        "description": "Nunc proin aliquet laoreet consectetur montes venenatis mollis malesuada nec. "
+    },
+    {
+        "id": 28,
+        "label": "Backstage - Sketch",
+        "key": "Backstage-Sketch",
+        "paintingURL": "./myexhibition/gallery/Backstage-Sketch.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Ballpoint Pen Sketch"
+        ],
+        "left": true,
+        "description": "Fringilla consectetur dis eros, mattis magnis leo eu. Blandit primis lorem egestas; litora dictumst magna. Cubilia ipsum tortor ullamcorper bibendum magna."
+    },
+    {
+        "id": 29,
+        "label": "Spectators Stand Sketch",
+        "key": "Spectators-Stand-Sketch",
+        "paintingURL": "./myexhibition/gallery/Spectators-Stand-Sketch.jpg",
+        "span": [
+            14,
+            10
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Ballpoint Pen Sketch"
+        ],
+        "left": true,
+        "description": "Aptent augue ultricies porttitor inceptos eget interdum pretium. Mus ridiculus felis facilisi rhoncus parturient ipsum orci felis cubilia."
+    },
+    {
+        "id": 30,
+        "label": "Desk - Sketch",
+        "key": "Desk-Sketch",
+        "paintingURL": "./myexhibition/gallery/Desk-Sketch.jpg",
+        "span": [
+            9,
+            15
+        ],
+        "size": [
+            "43.3 × 30 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "December 26, 2024",
+        "types": [
+            "White and Black",
+            "Line",
+            "Ballpoint Pen Sketch"
+        ],
+        "left": true,
+        "description": "Tellus finibus tortor sem accumsan ultrices conubia! Cubilia vitae nullam condimentum adipiscing a consequat dolor?"
+    }
+]

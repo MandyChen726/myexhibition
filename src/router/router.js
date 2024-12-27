@@ -1,66 +1,85 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 import store from "../store/store";
-import Layout from "../components/Layout/layout.vue"
-import mLayout from "../components/Layout/mLayout.vue"
-import home from "../components/home/home.vue"
-import mission from "../components/mission/mission.vue"
-import development from "../components/development/development.vue"
-import about from "../components/about/about.vue"
-import app from "../components/app/app.vue";
-import landing from "../components/app/landing.vue"
-import sunrise from "../components/app/sunrise.vue";
-import garden from "../components/app/garden.vue";
+import Layout from "../components/LuckyCat/Layout/layout.vue"
+import mLayout from "../components/LuckyCat/Layout/mLayout.vue"
+import home from "../components/LuckyCat/home/home.vue"
+import mission from "../components/LuckyCat/mission/mission.vue"
+import development from "../components/LuckyCat/development/development.vue"
+import about from "../components/LuckyCat/about/about.vue"
+import app from "../components/LuckyCat/app/app.vue";
+import landing from "../components/LuckyCat/app/landing.vue"
+import Luckycat from "../components/LuckyCat/app/luckycat.vue";
+import shop from "../components/LuckyCat/app/shop.vue";
 
 const routes = [
     {
         path: "/",
-        name: "SunRiseGarden",
-        component: store.state.display.isMobile ? mLayout : Layout,
+        name: "Mandy",
+        component: () => store.state.display.isMobile ? import("../components/Layout/mLayout.vue") : import("../components/Layout/layout.vue"),
         children: [
             {
                 path: "",
-                name: "SunRiseGarden-home",
-                component: home
+                name: "Exhibition",
+                component: () => store.state.display.isMobile ? import("../components/Exhibition/Layout/mLayout.vue") : import("../components/Exhibition/Layout/layout.vue"),
+                children: [
+                    {
+                        path: "/artwork/:artworkKey",
+                        name: "Exhibition-artwork",
+                        component: () => store.state.display.isMobile ? import("../components/Exhibition/artwork/mArtwork.vue") : import("../components/Exhibition/artwork/artwork.vue"),
+                    }
+                ]
             },
             {
-                path: "mission",
-                name: "SunRiseGarden-mission",
-                component: mission
-            },
-            {
-                path: "development-history",
-                name: "SunRiseGarden-development",
-                component: development
-            },
-            {
-                path: "about",
-                name: "SunRiseGarden-about",
-                component: about
-            },
-            {
-                path: "app/landing",
-                name: "SunRiseGarden-app-landing",
-                component: landing,
-            },
-            {
-                path: "app",
-                name: "SunRiseGarden-app",
-                component: app,
+                path: "/LuckyCat",
+                name: "LuckyCat",
+                component: store.state.display.isMobile ? mLayout : Layout,
                 children: [
                     {
                         path: "",
-                        name: "SunRiseGarden-app-sunrise",
-                        component: sunrise
+                        name: "LuckyCat-home",
+                        component: home
                     },
                     {
-                        path: "garden",
-                        name: "SunRiseGarden-app-garden",
-                        component: garden
+                        path: "mission",
+                        name: "LuckyCat-mission",
+                        component: mission
                     },
+                    {
+                        path: "development-history",
+                        name: "LuckyCat-development",
+                        component: development
+                    },
+                    {
+                        path: "about",
+                        name: "LuckyCat-about",
+                        component: about
+                    },
+                    {
+                        path: "app/landing",
+                        name: "LuckyCat-app-landing",
+                        component: landing,
+                    },
+                    {
+                        path: "app",
+                        name: "LuckyCat-app",
+                        component: app,
+                        children: [
+                            {
+                                path: "",
+                                name: "LuckyCat-app-sunrise",
+                                component: Luckycat
+                            },
+                            {
+                                path: "garden",
+                                name: "LuckyCat-app-garden",
+                                component: shop
+                            },
+                        ]
+                    }
                 ]
             }
         ]
-    }
+    },
 ];
 
 const router = createRouter({
