@@ -199,7 +199,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
                     <div v-if="identity === 2">
                         <n-flex vertical :size="12">
                             <transition>
-                                <div v-if="!hasCredit" class="status">
+                                <div v-if="!hasCredit && !isLate" class="status">
                                     <n-button color="#FFEB3B" size="large" strong @click="handleUpdate(1)"
                                         :loading="creditButtonLoading">
                                         Get Credit
@@ -207,7 +207,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
                                 </div>
                             </transition>
                             <div class="infoText">
-                                <div v-if="!hasCredit">
+                                <div v-if="!hasCredit && !isLate">
                                     Press this button before {{ endTimeBuffer }}<br /> each day to earn 1 credit
                                 </div>
                                 <div v-else-if="hasCredit">
@@ -216,7 +216,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
                                         You made it!
                                     </div>
                                 </div>
-                                <div v-else-if="!hasCredit">
+                                <div v-else-if="!hasCredit && isLate">
                                     <div style="font-size: 32px">See you in the morning!</div>
                                     <n-text :depth="3">
                                         Come back between {{ startTimeBuffer }} and {{ endTimeBuffer }}
@@ -237,6 +237,9 @@ function endIsMinuteDisabled(minute, selectedHour) {
     height: 100%;
     width: 100%;
     z-index: 5;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
 
     .familyID {
         padding: 24px;
@@ -254,10 +257,16 @@ function endIsMinuteDisabled(minute, selectedHour) {
         position: relative;
         width: 80%;
         aspect-ratio: 1 / 1.45;
+        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+        -moz-text-size-adjust: 100% !important;
 
         .luckycatImg {
             width: 100%;
             height: 100%;
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+            -moz-text-size-adjust: 100% !important;
         }
 
         .credit__display {
@@ -266,12 +275,18 @@ function endIsMinuteDisabled(minute, selectedHour) {
             width: 83%;
             left: calc(9%);
             aspect-ratio: 1 / 1;
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+            -moz-text-size-adjust: 100% !important;
 
             .credit__count {
                 height: 100%;
                 text-align: center;
                 line-height: 1;
                 margin-top: -4px;
+                -webkit-text-size-adjust: 100% !important;
+                text-size-adjust: 100% !important;
+                -moz-text-size-adjust: 100% !important;
 
                 .label {
                     font-size: 18px;
@@ -289,6 +304,9 @@ function endIsMinuteDisabled(minute, selectedHour) {
         width: 100%;
         text-align: center;
         z-index: 20;
+        -webkit-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
+        -moz-text-size-adjust: 100% !important;
 
         .status {
             .n-button {
@@ -303,6 +321,9 @@ function endIsMinuteDisabled(minute, selectedHour) {
         .infoText {
             font-size: 18px;
             padding: 0 24px;
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+            -moz-text-size-adjust: 100% !important;
         }
     }
 }
