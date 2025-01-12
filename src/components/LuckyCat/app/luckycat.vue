@@ -255,7 +255,7 @@ function endIsMinuteDisabled(minute, selectedHour) {
 
     .luckycat {
         position: relative;
-        width: 80%;
+        width: 75%;
         aspect-ratio: 1 / 1.45;
         -webkit-text-size-adjust: 100% !important;
         -webkit-text-size-adjust: none;
