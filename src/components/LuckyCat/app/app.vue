@@ -174,6 +174,9 @@ function getHasCredit(data) {
             z-index: 30;
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(15px);
+            -webkit-text-size-adjust: 100% !important;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
 
             .buttonContainer {
                 padding: 12px;
@@ -182,6 +185,9 @@ function getHasCredit(data) {
 
             .buttonText {
                 font-size: 18px;
+                -webkit-text-size-adjust: 100% !important;
+                -webkit-text-size-adjust: none;
+                -ms-text-size-adjust: none;
             }
         }
     }

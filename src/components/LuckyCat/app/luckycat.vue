@@ -237,9 +237,6 @@ function endIsMinuteDisabled(minute, selectedHour) {
     height: 100%;
     width: 100%;
     z-index: 5;
-    -webkit-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
-    -moz-text-size-adjust: 100% !important;
 
     .familyID {
         padding: 24px;
@@ -251,6 +248,9 @@ function endIsMinuteDisabled(minute, selectedHour) {
         backdrop-filter: blur(15px);
         padding: 12px;
         margin: 24px;
+        -webkit-text-size-adjust: 100% !important;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
     }
 
     .luckycat {
@@ -258,15 +258,15 @@ function endIsMinuteDisabled(minute, selectedHour) {
         width: 80%;
         aspect-ratio: 1 / 1.45;
         -webkit-text-size-adjust: 100% !important;
-        text-size-adjust: 100% !important;
-        -moz-text-size-adjust: 100% !important;
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
 
         .luckycatImg {
             width: 100%;
             height: 100%;
             -webkit-text-size-adjust: 100% !important;
-            text-size-adjust: 100% !important;
-            -moz-text-size-adjust: 100% !important;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
         }
 
         .credit__display {
@@ -276,25 +276,28 @@ function endIsMinuteDisabled(minute, selectedHour) {
             left: calc(9%);
             aspect-ratio: 1 / 1;
             -webkit-text-size-adjust: 100% !important;
-            text-size-adjust: 100% !important;
-            -moz-text-size-adjust: 100% !important;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
 
             .credit__count {
                 height: 100%;
                 text-align: center;
                 line-height: 1;
                 margin-top: -4px;
-                -webkit-text-size-adjust: 100% !important;
-                text-size-adjust: 100% !important;
-                -moz-text-size-adjust: 100% !important;
 
                 .label {
                     font-size: 18px;
+                    -webkit-text-size-adjust: 100% !important;
+                    -webkit-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
                 }
 
                 .value {
                     font-size: 18vw;
                     font-weight: bold;
+                    -webkit-text-size-adjust: 100% !important;
+                    -webkit-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
                 }
             }
         }
@@ -304,9 +307,6 @@ function endIsMinuteDisabled(minute, selectedHour) {
         width: 100%;
         text-align: center;
         z-index: 20;
-        -webkit-text-size-adjust: 100% !important;
-        text-size-adjust: 100% !important;
-        -moz-text-size-adjust: 100% !important;
 
         .status {
             .n-button {
@@ -315,6 +315,9 @@ function endIsMinuteDisabled(minute, selectedHour) {
                 padding: 32px 24px;
                 box-shadow: var(--boxShadow-regular);
                 border-radius: 12px;
+                -webkit-text-size-adjust: 100% !important;
+                -webkit-text-size-adjust: none;
+                -ms-text-size-adjust: none;
             }
         }
 
@@ -322,8 +325,8 @@ function endIsMinuteDisabled(minute, selectedHour) {
             font-size: 18px;
             padding: 0 24px;
             -webkit-text-size-adjust: 100% !important;
-            text-size-adjust: 100% !important;
-            -moz-text-size-adjust: 100% !important;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
         }
     }
 }

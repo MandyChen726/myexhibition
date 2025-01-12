@@ -36,5 +36,8 @@ const themeOverrides = {
 #app {
   margin: 0 auto;
   padding: 0;
+  -webkit-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
 }
 </style>
