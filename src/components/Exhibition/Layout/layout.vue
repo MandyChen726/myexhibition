@@ -10,6 +10,22 @@ const curArtwork = ref(null);
 
 initial();
 
+watch(curArtwork, (newVal) => {
+    if (!newVal) return
+    const currentIndex = artworks.value.findIndex(a => a.id === newVal.id)
+    if (currentIndex === -1) return
+
+    const length = artworks.value.length
+    const nextIndex = (currentIndex + 1) % length
+    const prevIndex = (currentIndex - 1 + length) % length
+
+    const nextArtwork = artworks.value[nextIndex]
+    const prevArtwork = artworks.value[prevIndex]
+
+    preloadImage(nextArtwork?.paintingURL)
+    preloadImage(prevArtwork?.paintingURL)
+})
+
 async function initial() {
     const buffer = await readJSON();
     artworks.value = buffer.data;
@@ -40,6 +56,12 @@ function getAction(data) {
         }
     }
     router.replace({ name: "Exhibition-artwork", params: { artworkKey: curArtwork.value.key } })
+}
+
+function preloadImage(url) {
+    if (!url) return;
+    const img = new Image();
+    img.src = url;
 }
 </script>
 
