@@ -421,24 +421,24 @@
     },
     {
         "id": 21,
-        "label": "This Fox and That Dinosaur",
-        "key": "This-Fox-And-That-Dinosaur",
+        "label": "Fox and the Dinosaur",
+        "key": "Fox-and-the-Dinosaur",
         "paintingURL": "./myexhibition/gallery/This-Fox-And-That-Dinosaur.JPG",
         "span": [
             13,
             11
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "50 × 40 CM"
         ],
-        "date": "December 26, 2024",
+        "date": "February 11, 2022",
         "types": [
-            "Blue and Brown",
-            "Acrylic Paint"
+            "Orange and Green",
+            "Acrylic Paint",
+            "Scene"
         ],
         "left": false,
-        "description": "Facilisis commodo risus taciti lacinia finibus. Feugiat fames cras proin nascetur phasellus facilisi lobortis. Donec tempor adipiscing senectus amet adipiscing posuere imperdiet luctus. Facilisis praesent turpis varius nullam massa fames metus."
+        "description": "My first acrylic painting is a small scene featuring a dinosaur and a fox, possibly communicating with each other—it's up to the audience to guess what they're saying."
     },
     {
         "id": 22,
