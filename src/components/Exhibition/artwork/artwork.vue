@@ -38,7 +38,7 @@ function handleLastNext(action) {
             backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 80%), url(${curArtwork.paintingURL})`
         }">
             <div style="position: relative; padding: 24px; z-index: 2;">
-                <n-grid :x-gap="24">
+                <n-grid :x-gap="48">
                     <n-gi v-if="curArtwork.left" :span="curArtwork.span[1]" class="painting">
                         <n-image :src="curArtwork.paintingURL"></n-image>
                     </n-gi>

@@ -35,7 +35,7 @@ function handleLastNext(action) {
 <template>
     <transition>
         <div v-if="readyRender" class="artwork_container" :style="{
-            backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 1) 100%), url(${curArtwork.paintingURL})`
+            backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%), url(${curArtwork.paintingURL})`
         }">
             <n-scrollbar style="max-height: calc(100vh - 70px - 96px)">
                 <div style="position: relative; padding: 24px; z-index: 2;">
@@ -153,7 +153,6 @@ function handleLastNext(action) {
     }
 
     .painting {
-
         :deep(img) {
             width: 100%;
             object-fit: contain !important;

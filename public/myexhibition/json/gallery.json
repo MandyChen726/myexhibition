@@ -1,6 +1,49 @@
 [
     {
         "id": 1,
+        "label": "Christmas Eve 2024",
+        "key": "Christmas-Eve-2024",
+        "paintingURL": "./myexhibition/gallery/Christmas-Eve-2024.JPG",
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "40 × 30 CM",
+            "15 3/4 × 11 13/16 IN."
+        ],
+        "date": "December 14, 2024",
+        "types": [
+            "Acrylic Paint",
+            "Acrylic Marker",
+            "Animals"
+        ],
+        "left": false,
+        "description": "My pets soar through the dark night of Christmas Eve, each with their own unique expression, filled with wonder and excitement."
+    },
+    {
+        "id": 2,
+        "label": "Under the Christmas Tree",
+        "key": "Under-the-Christmas-Tree",
+        "paintingURL": "./myexhibition/gallery/Under-the-Christmas-Tree.JPG",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "15 × 15 CM"
+        ],
+        "date": "December 14, 2024",
+        "types": [
+            "Acrylic Paint",
+            "Acrylic Marker",
+            "Animals"
+        ],
+        "left": false,
+        "description": "My pets gaze up at the glowing star atop the Christmas tree, all looking surprised and filled with wonder."
+    },
+    {
+        "id": 3,
         "label": "Untitled",
         "key": "Untitled",
         "paintingURL": "./myexhibition/gallery/Nameless.JPG",
@@ -21,7 +64,7 @@
         "description": "An abstract artwork expressing anger and fury, with hints of blue and green for balance. The process involved throwing and stabbing techniques, adding raw energy to the piece."
     },
     {
-        "id": 2,
+        "id": 4,
         "label": "Harry Kane - Portrait",
         "key": "Harry-Edward-Kane-Portrait",
         "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Casual.JPG",
@@ -41,48 +84,6 @@
         ],
         "left": false,
         "description": "Harry Kane's portrait exudes a calm, composed aura, capturing his focus and quiet strength both on and off the field."
-    },
-    {
-        "id": 3,
-        "label": "Harry Kane - Pen",
-        "key": "Harry-Edward-Kane-Pen",
-        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Sketch.jpg",
-        "span": [
-            13,
-            11
-        ],
-        "size": [
-            "A4 Size"
-        ],
-        "date": "December 17, 2023",
-        "types": [
-            "White and Black",
-            "Pen",
-            "Line",
-            "Kane"
-        ],
-        "left": true,
-        "description": "I drew my favorite player, Harry Kane, in an England kit. It was quite challenging, as getting the proportions right was difficult."
-    },
-    {
-        "id": 4,
-        "label": "Harry Kane - King",
-        "key": "Harry-Edward-Kane-King",
-        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-King.jpg",
-        "span": [
-            13,
-            11
-        ],
-        "size": [
-            "40 × 30 CM"
-        ],
-        "date": "2023",
-        "types": [
-            "Kane",
-            "Acrylic Paint"
-        ],
-        "left": false,
-        "description": "My favorite player, Kane, imagined as a king, symbolizing my wish for him to earn the trophies he truly deserves."
     },
     {
         "id": 5,
@@ -166,27 +167,6 @@
     },
     {
         "id": 9,
-        "label": "Animals That Lives on Songshan",
-        "key": "Songshan-Animals-Sketch",
-        "paintingURL": "./myexhibition/gallery/Songshan-Animals-Sketch.jpg",
-        "span": [
-            10,
-            14
-        ],
-        "size": [
-            "28 × 21 CM"
-        ],
-        "date": "November, 2024",
-        "types": [
-            "Black and White",
-            "Animals",
-            "Pencil Sketches"
-        ],
-        "left": true,
-        "description": "During my hike on Songshan in Henan, I spotted homeless cats and dogs. Rather than seeming sad, they appeared free and content, living with a sense of independence and joy."
-    },
-    {
-        "id": 10,
         "label": "Mimi - Portrait",
         "key": "Mimi-Portrait",
         "paintingURL": "./myexhibition/gallery/Rice-Elegant.jpg",
@@ -206,7 +186,7 @@
         "description": "A portrait of Mimi, the cat, with his background in playful green, capturing his energetic personality, full of curiosity and joy."
     },
     {
-        "id": 11,
+        "id": 10,
         "label": "Corona - Portrait",
         "key": "Corona-Portrait",
         "paintingURL": "./myexhibition/gallery/Nana.jpg",
@@ -224,6 +204,26 @@
         ],
         "left": false,
         "description": "A portrait of Corona, the cat, where her colors reflect her unique personality—vibrant and full of life, yet with a touch of mystery that mirrors her playful yet independent nature."
+    },
+    {
+        "id": 11,
+        "label": "Harry Kane - King",
+        "key": "Harry-Edward-Kane-King",
+        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-King.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "40 × 30 CM"
+        ],
+        "date": "2023",
+        "types": [
+            "Kane",
+            "Acrylic Paint"
+        ],
+        "left": false,
+        "description": "My favorite player, Kane, imagined as a king, symbolizing my wish for him to earn the trophies he truly deserves."
     },
     {
         "id": 12,
@@ -442,45 +442,46 @@
     },
     {
         "id": 22,
-        "label": "Charmander",
-        "key": "Charmander",
+        "label": "A Tiny Dragon",
+        "key": "A-Tiny-Dragon",
         "paintingURL": "./myexhibition/gallery/Charmander.jpg",
         "span": [
             10,
             14
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "40 × 30 CM",
+            "15 3/4 × 11 13/16 IN."
         ],
-        "date": "December 26, 2024",
+        "date": "October 8, 2023",
         "types": [
-            "Gray and Red",
+            "Red",
             "Acrylic Paint"
         ],
         "left": false,
-        "description": "Volutpat purus et suspendisse aliquet ac nostra fringilla montes? Per proin aptent et himenaeos convallis et accumsan augue porttitor. Nam adipiscing dolor malesuada suspendisse, condimentum congue porttitor."
+        "description": "This painting portrays a realistic child fire dragon, capturing its fiery essence and playful yet fierce expression. (Unoriginal)"
     },
     {
         "id": 23,
-        "label": "Giraffe",
-        "key": "Giraffe",
+        "label": "Vibrant Giraffe",
+        "key": "Vibrant-Giraffe",
         "paintingURL": "./myexhibition/gallery/Giraffe.jpg",
         "span": [
             13,
             11
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "40 × 30 CM",
+            "15 3/4 × 11 13/16 IN."
         ],
-        "date": "December 26, 2024",
+        "date": "2022",
         "types": [
-            "Blue and Yellow",
-            "Acrylic Paint"
+            "Colorful",
+            "Acrylic Paint",
+            "Animal"
         ],
         "left": false,
-        "description": "Praesent massa pulvinar massa pulvinar odio praesent class finibus. Natoque hac massa convallis, libero mi ex viverra nisl duis. Tristique donec eros imperdiet; ultricies cubilia rhoncus habitasse lectus. Platea laoreet ultricies sed eget aliquet sociosqu consequat auctor. Himenaeos consectetur cubilia lacinia lacus gravida."
+        "description": "As one of my first acrylic art pieces, the colors are beautifully represented with a vibrant and bold palette. (Unoriginal)"
     },
     {
         "id": 24,
@@ -492,148 +493,225 @@
             14
         ],
         "size": [
-            " 30 × 43.3 CM",
-            " 11 13/16 × 17 1/16 IN."
+            " 39 × 27 CM"
         ],
-        "date": "December 26, 2024",
+        "date": "August 25, 2024",
         "types": [
-            "Blue and Yellow",
-            "Realistic",
-            "Acrylic Paint"
+            "Blue",
+            "Color Pencil",
+            "Paper"
         ],
         "left": false,
-        "description": "Dis neque maximus et tempor lacus commodo nec? Purus arcu nisl facilisis ultrices imperdiet litora elementum blandit. Pulvinar sapien mollis per nibh tempus."
+        "description": "This is my favorite snack, Pick Up—it's a biscuit with chocolate. This piece was extremely time-consuming, as it is a realistic artwork."
     },
     {
         "id": 25,
-        "label": "Cat - Sketch",
-        "key": "Cat-Sketch",
+        "label": "Royal Guard's Shield",
+        "key": "Royal-Guards-Shield",
+        "paintingURL": "./myexhibition/gallery/Royal-Guards-Shield.JPG",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "60 × 40 CM"
+        ],
+        "date": "May 26, 2024",
+        "types": [
+            "Black and white",
+            "Ink pen",
+            "Zelda"
+        ],
+        "left": false,
+        "description": "This is a royal guard's shield from The Legend of Zelda: Breath of the Wild and Tears of the Kingdom, drawn with ink pen. It took a long time to carefully create each line and clean up the piece."
+    },
+    {
+        "id": 26,
+        "label": "Evil Mickey",
+        "key": "Evil-Mickey",
+        "paintingURL": "./myexhibition/gallery/Evil-Mickey.JPG",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "50 × 30 CM",
+            "19 7/10 × 11 13/16 IN."
+        ],
+        "date": "December 22, 2024",
+        "types": [
+            "Black and white",
+            "Pencil Sketch"
+        ],
+        "left": false,
+        "description": "Even a character like Mickey can have an evil side, showing that darkness exists in everyone, just as it does in people."
+    },
+    {
+        "id": 27,
+        "label": "Animals That Lives on Songshan",
+        "key": "Songshan-Animals-Sketch",
+        "paintingURL": "./myexhibition/gallery/Songshan-Animals-Sketch.jpg",
+        "span": [
+            10,
+            14
+        ],
+        "size": [
+            "28 × 21 CM"
+        ],
+        "date": "November, 2024",
+        "types": [
+            "Black and White",
+            "Animals",
+            "Pencil Sketches"
+        ],
+        "left": true,
+        "description": "During my hike on Songshan in Henan, I spotted homeless cats and dogs. Rather than seeming sad, they appeared free and content, living with a sense of independence and joy."
+    },
+    {
+        "id": 28,
+        "label": "Harry Kane - Pen",
+        "key": "Harry-Edward-Kane-Pen",
+        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Sketch.jpg",
+        "span": [
+            13,
+            11
+        ],
+        "size": [
+            "A4 Size"
+        ],
+        "date": "December 17, 2023",
+        "types": [
+            "White and Black",
+            "Pen",
+            "Line",
+            "Kane"
+        ],
+        "left": true,
+        "description": "I drew my favorite player, Harry Kane, in an England kit. It was quite challenging, as getting the proportions right was difficult."
+    },
+    {
+        "id": 29,
+        "label": "Three Cats - Pen",
+        "key": "Three-Cats-Pen",
         "paintingURL": "./myexhibition/gallery/Cat-Sketch.jpg",
         "span": [
             9,
             15
         ],
         "size": [
-            " 30 × 43.3 CM",
-            " 11 13/16 × 17 1/16 IN."
+            " 30 × 20 CM"
         ],
-        "date": "December 26, 2024",
+        "date": "2024",
         "types": [
             "White and Black",
-            "Line",
-            "Pencil Sketch"
+            "Sketch",
+            "Paper",
+            "Cats"
         ],
         "left": true,
-        "description": "Lectus pellentesque porta sed duis sem malesuada cursus efficitur ac. Lectus gravida habitant ut netus fames quis? "
+        "description": "I drew my three cats in a cartoon style, using a ballpoint pen to sketch the lines."
     },
     {
-        "id": 26,
-        "label": "The Calico of Longmen Grottoes",
-        "key": "the-Calico-of-Longmen-Grottoes",
+        "id": 30,
+        "label": "Cat at Longmen Grottoes",
+        "key": "Cat-of-Longmen-Grottoes",
         "paintingURL": "./myexhibition/gallery/the-Calico-of-Longmen-Grottoes.jpg",
         "span": [
             14,
             10
         ],
         "size": [
-            "43.3 × 30 CM",
+            "21 × 14 CM",
             "17 1/16 × 11 13/16 IN."
         ],
-        "date": "December 26, 2024",
+        "date": "November, 2024",
         "types": [
             "White and Black",
-            "Line",
-            "Pencil Sketch"
+            "Sketch",
+            "Cat"
         ],
         "left": true,
-        "description": "Volutpat phasellus faucibus blandit fusce iaculis, class luctus id ullamcorper. Aliquam lacus ridiculus inceptos risus fringilla tempus maximus neque."
+        "description": "A sketch of a calico cat seen at the Longmen Grottoes."
     },
     {
-        "id": 27,
-        "label": "Laboratory - Sketch",
-        "key": "Laboratory-Sketch",
+        "id": 31,
+        "label": "Science Lab",
+        "key": "Science-Lab",
         "paintingURL": "./myexhibition/gallery/Laboratory-Sketch.jpg",
         "span": [
             13,
             11
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "21 × 14 CM"
         ],
         "date": "December 26, 2024",
         "types": [
             "White and Black",
-            "Line",
-            "Ballpoint Pen Sketch"
+            "Sketch"
         ],
         "left": true,
         "description": "Nunc proin aliquet laoreet consectetur montes venenatis mollis malesuada nec. "
     },
     {
-        "id": 28,
-        "label": "Backstage - Sketch",
-        "key": "Backstage-Sketch",
+        "id": 32,
+        "label": "Back Stage",
+        "key": "Back-Stage",
         "paintingURL": "./myexhibition/gallery/Backstage-Sketch.jpg",
         "span": [
             13,
             11
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "21 × 14 CM"
         ],
-        "date": "December 26, 2024",
+        "date": "November, 2024",
         "types": [
             "White and Black",
-            "Line",
-            "Ballpoint Pen Sketch"
+            "Sketch"
         ],
         "left": true,
-        "description": "Fringilla consectetur dis eros, mattis magnis leo eu. Blandit primis lorem egestas; litora dictumst magna. Cubilia ipsum tortor ullamcorper bibendum magna."
+        "description": "A simple sketch in my note book of the back stage."
     },
     {
-        "id": 29,
-        "label": "Spectators Stand Sketch",
-        "key": "Spectators-Stand-Sketch",
+        "id": 33,
+        "label": "The Stage",
+        "key": "The-Stage",
         "paintingURL": "./myexhibition/gallery/Spectators-Stand-Sketch.jpg",
         "span": [
             14,
             10
         ],
         "size": [
-            "43.3 × 30 CM",
-            "17 1/16 × 11 13/16 IN."
+            "21 × 14 CM"
         ],
-        "date": "December 26, 2024",
+        "date": "November, 2024",
         "types": [
             "White and Black",
-            "Line",
-            "Ballpoint Pen Sketch"
+            "Sketch"
         ],
         "left": true,
-        "description": "Aptent augue ultricies porttitor inceptos eget interdum pretium. Mus ridiculus felis facilisi rhoncus parturient ipsum orci felis cubilia."
+        "description": "I drew a simple black-and-white stage in my notebook. It’s minimalist, sleek, and has a modern look."
     },
     {
-        "id": 30,
-        "label": "Desk - Sketch",
-        "key": "Desk-Sketch",
+        "id": 34,
+        "label": "My Table",
+        "key": "My-Table",
         "paintingURL": "./myexhibition/gallery/Desk-Sketch.jpg",
         "span": [
             9,
             15
         ],
         "size": [
-            "43.3 × 30 CM",
+            "28 × 21 CM",
             "17 1/16 × 11 13/16 IN."
         ],
-        "date": "December 26, 2024",
+        "date": "November, 2024",
         "types": [
             "White and Black",
-            "Line",
-            "Ballpoint Pen Sketch"
+            "Sketch"
         ],
         "left": true,
-        "description": "Tellus finibus tortor sem accumsan ultrices conubia! Cubilia vitae nullam condimentum adipiscing a consequat dolor?"
+        "description": "A sketch I sketched a simple black-and-white design for my desk in my notebook. It’s clean, minimal, and has a modern feel."
     }
 ]
