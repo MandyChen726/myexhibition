@@ -1,7 +1,7 @@
 {
     "name": "Mandy's World",
     "short_name": "App",
-    "start_url": "https://mandychen.hillcodex.com/#/app/landing",
+    "start_url": "https://mandychen.hillcodex.com/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000"
