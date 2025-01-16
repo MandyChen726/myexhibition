@@ -1,7 +1,7 @@
 {
     "name": "Mandy's World",
     "short_name": "App",
-    "start_url": "https://mandychen.hillcodex.com/",
+    "start_url": "https://mandychen.hillcodex.com/#/artwork/Christmas-Eve-2024",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000"
