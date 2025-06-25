@@ -713,5 +713,27 @@
         ],
         "left": true,
         "description": "A sketch I sketched a simple black-and-white design for my desk in my notebook. It’s clean, minimal, and has a modern feel."
+    },
+
+    {
+        "id": 35,
+        "label": "Me",
+        "key": "Me",
+        "paintingURL": "./myexhibition/gallery/Me.JPG",
+        "span": [
+            9,
+            15
+        ],
+        "size": [
+            "28 × 21 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "April 12, 2025",
+        "types": [
+            "White and Black",
+            "Sketch"
+        ],
+        "left": true,
+        "description": "A sketch I sketched a simple black-and-white design for my desk in my notebook. It’s clean, minimal, and has a modern feel."
     }
 ]
