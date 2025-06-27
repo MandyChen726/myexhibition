@@ -19,7 +19,12 @@ const routes = [
         children: [
             {
                 path: "",
-                name: "Exhibition",
+                name: "Exhibition-Landing",
+                component: () => import("../components/Exhibition/Landing/LandingView.vue"),
+            },
+            {
+                path: "artwork",
+                name: "Artwork",
                 component: () => store.state.display.isMobile ? import("../components/Exhibition/Layout/mLayout.vue") : import("../components/Exhibition/Layout/layout.vue"),
                 children: [
                     {

@@ -4,10 +4,13 @@ import { ref } from 'vue'
 </script>
 
 <template>
-    <n-layout>
-        <n-layout-sider style="height: 100vh">
+    <n-layout style="position: relative;" has-sider>
+        <n-layout-sider :width="'5rem'">
             <div class="rotated-text">
-                竖排文字示例
+                Mandy is a remarkably gifted teenage painter whose work already demonstrates a maturity and confidence
+                well beyond her years. From early on, she showed an intuitive understanding of color, composition, and
+                balance—qualities that have only deepened as she’s explored the expressive possibilities of acrylic
+                paint.
             </div>
         </n-layout-sider>
         <n-layout-content>
@@ -17,11 +20,15 @@ import { ref } from 'vue'
 </template>
 
 <style lang='less' scoped>
-.rotated-text {
-    transform: rotate(90deg);
-    transform-origin: top left;
-    position: relative;
-    top: 1rem;
-    left: 1rem;
+.n-layout-sider {
+    position: fixed;
+    height: 100vh;
+
+    .rotated-text {
+        position: fixed;
+        transform: rotate(-90deg) translateX(-100%);
+        transform-origin: left top;
+        width: 100vh;
+    }
 }
 </style>
