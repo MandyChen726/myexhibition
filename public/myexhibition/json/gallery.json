@@ -19,7 +19,7 @@
             "Animals"
         ],
         "left": false,
-        "description": "My pets soar through the dark night of Christmas Eve, each with their own unique expression, filled with wonder and excitement."
+        "description": "My pets glide through the starry Christmas Eve sky, their eyes sparkling with wonder. A curious kitten bats at snowflakes, while a joyful pup barks at the moon. Two rabbits clutch tiny gifts, noses twitching with excitement. The frosty night wraps them in magic, turning this ordinary flight into something extraordinary."
     },
     {
         "id": 2,
@@ -683,7 +683,7 @@
             10
         ],
         "size": [
-            "21 × 14 CM"
+            "20 × 14 CM"
         ],
         "date": "November, 2024",
         "types": [
@@ -724,8 +724,8 @@
             15
         ],
         "size": [
-            "28 × 21 CM",
-            "17 1/16 × 11 13/16 IN."
+            "30 × 20 CM",
+            "11 13/16 × 7 7/8 IN"
         ],
         "date": "April 12, 2025",
         "types": [
@@ -745,8 +745,8 @@
             15
         ],
         "size": [
-            "28 × 21 CM",
-            "17 1/16 × 11 13/16 IN."
+            "30 × 20 CM",
+            "11 13/16 × 7 7/8 IN."
         ],
         "date": "March 30, 2025",
         "types": [
@@ -766,8 +766,8 @@
             11
         ],
         "size": [
-            "28 × 21 CM",
-            "17 1/16 × 11 13/16 IN."
+            "20 × 15 CM",
+            "7 7/8 × 5 7/8 IN."
         ],
         "date": "April 2, 2025",
         "types": [
@@ -787,8 +787,8 @@
             15
         ],
         "size": [
-            "28 × 21 CM",
-            "17 1/16 × 11 13/16 IN."
+            "30 × 20 CM",
+            "11 13/16 × 7 7/8 IN."
         ],
         "date": "June 24, 2025",
         "types": [
@@ -797,5 +797,26 @@
         ],
         "left": true,
         "description": "A sketch I sketched a simple black-and-white design for my desk in my notebook. It’s clean, minimal, and has a modern feel."
-    }
+    },
+    {
+        "id": 39,
+        "label": "Rauru's Right Arm",
+        "key": "Raurus-Right-Arm",
+        "paintingURL": "./myexhibition/gallery/Rauru's Right Arm.JPG",
+        "span": [
+            15,
+            9
+        ],
+        "size": [
+            "28 × 21 CM",
+            "17 1/16 × 11 13/16 IN."
+        ],
+        "date": "January 31, 2025",
+        "types": [
+            "The Legend of Zelda (TOTK)",
+            "Color Pencil"
+        ],
+        "left": false,
+        "description": "A sketch I sketched a simple black-and-white design for my desk in my notebook. It’s clean, minimal, and has a modern feel."
+    }    
 ]
