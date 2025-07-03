@@ -1,23 +1,25 @@
 [
     {
-        "label": "Christmas Eve 2024",
-        "key": "Christmas-Eve-2024",
+        "label": "Lord of the Flies: The HUNT",
+        "key": "Lotf-The-Hunt",
         "paintingURL": [
-            "./myexhibition/gallery/Christmas-Eve-2024.JPG"
+            "./myexhibition/gallery/Lotf 1.PNG",
+            "./myexhibition/gallery/Lotf 2.PNG",
+            "./myexhibition/gallery/Lotf 3.PNG",
+            "./myexhibition/gallery/Lotf 4.PNG"
         ],
         "span": [
             11,
             13
         ],
         "size": [
-            "40 × 30 CM",
-            "15 3/4 × 11 13/16 IN."
+            "21 × 30 CM",
+            "8.27 × 11.69 IN."
         ],
-        "date": "December 14, 2024",
+        "date": "May 22, 2025",
         "types": [
-            "Acrylic Paint",
-            "Acrylic Marker",
-            "Animals"
+            "Ink",
+            "Black and White"
         ],
         "left": false,
         "description": "My pets soar through the dark night of Christmas Eve, each with their own unique expression, filled with wonder and excitement."
