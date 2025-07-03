@@ -1,9 +1,10 @@
 [
     {
-        "id": 1,
         "label": "Christmas Eve 2024",
         "key": "Christmas-Eve-2024",
-        "paintingURL": "./myexhibition/gallery/Christmas-Eve-2024.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Christmas-Eve-2024.JPG"
+        ],
         "span": [
             11,
             13
@@ -22,10 +23,34 @@
         "description": "My pets soar through the dark night of Christmas Eve, each with their own unique expression, filled with wonder and excitement."
     },
     {
-        "id": 2,
+        "label": "Christmas Eve 2024",
+        "key": "Christmas-Eve-2024",
+        "paintingURL": [
+            "./myexhibition/gallery/Christmas-Eve-2024.JPG"
+        ],
+        "span": [
+            11,
+            13
+        ],
+        "size": [
+            "40 × 30 CM",
+            "15 3/4 × 11 13/16 IN."
+        ],
+        "date": "December 14, 2024",
+        "types": [
+            "Acrylic Paint",
+            "Acrylic Marker",
+            "Animals"
+        ],
+        "left": false,
+        "description": "My pets soar through the dark night of Christmas Eve, each with their own unique expression, filled with wonder and excitement."
+    },
+    {
         "label": "Under the Christmas Tree",
         "key": "Under-the-Christmas-Tree",
-        "paintingURL": "./myexhibition/gallery/Under-the-Christmas-Tree.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Under-the-Christmas-Tree.JPG"
+        ],
         "span": [
             13,
             11
@@ -43,10 +68,11 @@
         "description": "My pets gaze up at the glowing star atop the Christmas tree, all looking surprised and filled with wonder."
     },
     {
-        "id": 3,
         "label": "Untitled",
         "key": "Untitled",
-        "paintingURL": "./myexhibition/gallery/Nameless.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Nameless.JPG"
+        ],
         "span": [
             13,
             11
@@ -64,10 +90,11 @@
         "description": "An abstract artwork expressing anger and fury, with hints of blue and green for balance. The process involved throwing and stabbing techniques, adding raw energy to the piece."
     },
     {
-        "id": 4,
         "label": "Harry Kane - Portrait",
         "key": "Harry-Edward-Kane-Portrait",
-        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Casual.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Harry-Edward-Kane-Casual.JPG"
+        ],
         "span": [
             11,
             13
@@ -89,7 +116,9 @@
         "id": 5,
         "label": "Mimi in Circles - The Wash",
         "key": "Mimi-Wash",
-        "paintingURL": "./myexhibition/gallery/Rice-Relaxed.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Rice-Relaxed.JPG"
+        ],
         "span": [
             11,
             13
@@ -109,7 +138,9 @@
         "id": 6,
         "label": "Mimi in Circles - The Fury",
         "key": "Mimi-Fury",
-        "paintingURL": "./myexhibition/gallery/Rice-Arrogant.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Rice-Arrogant.JPG"
+        ],
         "span": [
             11,
             13
@@ -129,7 +160,9 @@
         "id": 7,
         "label": "Mimi in Circles - The Stare",
         "key": "Mimi-Stare",
-        "paintingURL": "./myexhibition/gallery/Rice-Stare.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Rice-Stare.JPG"
+        ],
         "span": [
             11,
             13
@@ -149,7 +182,9 @@
         "id": 8,
         "label": "TinTin - Portrait",
         "key": "Tin-Tin",
-        "paintingURL": "./myexhibition/gallery/Ding-Ding.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Ding-Ding.JPG"
+        ],
         "span": [
             11,
             13
@@ -169,7 +204,9 @@
         "id": 9,
         "label": "Mimi - Portrait",
         "key": "Mimi-Portrait",
-        "paintingURL": "./myexhibition/gallery/Rice-Elegant.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Rice-Elegant.jpg"
+        ],
         "span": [
             11,
             13
@@ -189,7 +226,9 @@
         "id": 10,
         "label": "Corona - Portrait",
         "key": "Corona-Portrait",
-        "paintingURL": "./myexhibition/gallery/Nana.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Nana.jpg"
+        ],
         "span": [
             11,
             13
@@ -209,7 +248,9 @@
         "id": 11,
         "label": "Harry Kane - King",
         "key": "Harry-Edward-Kane-King",
-        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-King.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Harry-Edward-Kane-King.jpg"
+        ],
         "span": [
             13,
             11
@@ -229,7 +270,9 @@
         "id": 12,
         "label": "Three Cats",
         "key": "Cat-Cartoon",
-        "paintingURL": "./myexhibition/gallery/Cat-Cartoon.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Cat-Cartoon.jpg"
+        ],
         "span": [
             10,
             14
@@ -250,7 +293,9 @@
         "id": 13,
         "label": "Corona - Abstract",
         "key": "Corona-Abstract",
-        "paintingURL": "./myexhibition/gallery/Cat-Distorted.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Cat-Distorted.jpg"
+        ],
         "span": [
             13,
             11
@@ -273,7 +318,9 @@
         "id": 14,
         "label": "Vow to the Princess",
         "key": "Vow-to-the-Princess",
-        "paintingURL": "./myexhibition/gallery/The-Last-Time.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/The-Last-Time.JPG"
+        ],
         "span": [
             10,
             14
@@ -296,7 +343,9 @@
         "id": 15,
         "label": "Map of Hyrule (Tears of the Kingdom)",
         "key": "Map-of-Hyrule",
-        "paintingURL": "./myexhibition/gallery/Hyrule.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Hyrule.JPG"
+        ],
         "span": [
             10,
             14
@@ -318,7 +367,9 @@
         "id": 16,
         "label": "Not Alone",
         "key": "Not-Alone",
-        "paintingURL": "./myexhibition/gallery/Backers.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Backers.jpg"
+        ],
         "span": [
             11,
             13
@@ -339,7 +390,9 @@
         "id": 17,
         "label": "Into the Sun",
         "key": "Into-the-Sun",
-        "paintingURL": "./myexhibition/gallery/Sunset.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Sunset.jpg"
+        ],
         "span": [
             11,
             13
@@ -361,7 +414,9 @@
         "id": 18,
         "label": "Landscape",
         "key": "Landscape",
-        "paintingURL": "./myexhibition/gallery/Landscape.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Landscape.jpg"
+        ],
         "span": [
             9,
             15
@@ -381,7 +436,9 @@
         "id": 19,
         "label": "My Family",
         "key": "My-Family",
-        "paintingURL": "./myexhibition/gallery/Family.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Family.jpg"
+        ],
         "span": [
             10,
             14
@@ -402,7 +459,9 @@
         "id": 20,
         "label": "Islet",
         "key": "Islet",
-        "paintingURL": "./myexhibition/gallery/Islet.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Islet.JPG"
+        ],
         "span": [
             10,
             14
@@ -423,7 +482,9 @@
         "id": 21,
         "label": "Fox and the Dinosaur",
         "key": "Fox-and-the-Dinosaur",
-        "paintingURL": "./myexhibition/gallery/This-Fox-And-That-Dinosaur.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/This-Fox-And-That-Dinosaur.JPG"
+        ],
         "span": [
             13,
             11
@@ -444,7 +505,9 @@
         "id": 22,
         "label": "A Tiny Dragon",
         "key": "A-Tiny-Dragon",
-        "paintingURL": "./myexhibition/gallery/Charmander.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Charmander.jpg"
+        ],
         "span": [
             10,
             14
@@ -465,7 +528,9 @@
         "id": 23,
         "label": "Vibrant Giraffe",
         "key": "Vibrant-Giraffe",
-        "paintingURL": "./myexhibition/gallery/Giraffe.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Giraffe.jpg"
+        ],
         "span": [
             13,
             11
@@ -487,7 +552,9 @@
         "id": 24,
         "label": "Pick Up",
         "key": "Pick-Up",
-        "paintingURL": "./myexhibition/gallery/Pick-Up.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Pick-Up.JPG"
+        ],
         "span": [
             10,
             14
@@ -508,7 +575,9 @@
         "id": 25,
         "label": "Royal Guard's Shield",
         "key": "Royal-Guards-Shield",
-        "paintingURL": "./myexhibition/gallery/Royal-Guards-Shield.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Royal-Guards-Shield.JPG"
+        ],
         "span": [
             13,
             11
@@ -529,7 +598,9 @@
         "id": 26,
         "label": "Evil Mickey",
         "key": "Evil-Mickey",
-        "paintingURL": "./myexhibition/gallery/Evil-Mickey.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Evil-Mickey.JPG"
+        ],
         "span": [
             13,
             11
@@ -550,7 +621,9 @@
         "id": 27,
         "label": "Animals That Lives on Songshan",
         "key": "Songshan-Animals-Sketch",
-        "paintingURL": "./myexhibition/gallery/Songshan-Animals-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Songshan-Animals-Sketch.jpg"
+        ],
         "span": [
             10,
             14
@@ -571,7 +644,9 @@
         "id": 28,
         "label": "Harry Kane - Pen",
         "key": "Harry-Edward-Kane-Pen",
-        "paintingURL": "./myexhibition/gallery/Harry-Edward-Kane-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Harry-Edward-Kane-Sketch.jpg"
+        ],
         "span": [
             13,
             11
@@ -593,7 +668,9 @@
         "id": 29,
         "label": "Three Cats - Pen",
         "key": "Three-Cats-Pen",
-        "paintingURL": "./myexhibition/gallery/Cat-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Cat-Sketch.jpg"
+        ],
         "span": [
             9,
             15
@@ -615,7 +692,9 @@
         "id": 30,
         "label": "Cat at Longmen Grottoes",
         "key": "Cat-of-Longmen-Grottoes",
-        "paintingURL": "./myexhibition/gallery/the-Calico-of-Longmen-Grottoes.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/the-Calico-of-Longmen-Grottoes.jpg"
+        ],
         "span": [
             14,
             10
@@ -637,7 +716,9 @@
         "id": 31,
         "label": "Science Lab",
         "key": "Science-Lab",
-        "paintingURL": "./myexhibition/gallery/Laboratory-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Laboratory-Sketch.jpg"
+        ],
         "span": [
             13,
             11
@@ -657,7 +738,9 @@
         "id": 32,
         "label": "Back Stage",
         "key": "Back-Stage",
-        "paintingURL": "./myexhibition/gallery/Backstage-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Backstage-Sketch.jpg"
+        ],
         "span": [
             13,
             11
@@ -677,7 +760,9 @@
         "id": 33,
         "label": "The Stage",
         "key": "The-Stage",
-        "paintingURL": "./myexhibition/gallery/Spectators-Stand-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Spectators-Stand-Sketch.jpg"
+        ],
         "span": [
             14,
             10
@@ -697,7 +782,9 @@
         "id": 34,
         "label": "My Table",
         "key": "My-Table",
-        "paintingURL": "./myexhibition/gallery/Desk-Sketch.jpg",
+        "paintingURL": [
+            "./myexhibition/gallery/Desk-Sketch.jpg"
+        ],
         "span": [
             9,
             15
@@ -718,7 +805,9 @@
         "id": 35,
         "label": "Me",
         "key": "Me",
-        "paintingURL": "./myexhibition/gallery/Me.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Me.JPG"
+        ],
         "span": [
             9,
             15
@@ -739,7 +828,9 @@
         "id": 36,
         "label": "Plane to Osaka",
         "key": "Plane-to-Osaka",
-        "paintingURL": "./myexhibition/gallery/Plane to Osaka.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Plane to Osaka.JPG"
+        ],
         "span": [
             9,
             15
@@ -760,7 +851,9 @@
         "id": 37,
         "label": "Nintendo Direct for the Switch 2",
         "key": "Nintendo-Direct-for-the-Switch2",
-        "paintingURL": "./myexhibition/gallery/Nintendo Direct for the Switch 2.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Nintendo Direct for the Switch 2.JPG"
+        ],
         "span": [
             13,
             11
@@ -781,7 +874,9 @@
         "id": 38,
         "label": "Plane to Xiamen",
         "key": "Plane-to-Xiamen",
-        "paintingURL": "./myexhibition/gallery/Plane to Xiamen.JPG",
+        "paintingURL": [
+            "./myexhibition/gallery/Plane to Xiamen.JPG"
+        ],
         "span": [
             9,
             15

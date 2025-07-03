@@ -26,7 +26,15 @@ watch(currentIndex, newVal => {
 async function initial() {
     const buffer = await readJSON();
     artworks.value = buffer.data;
-    console.log(artworks.value)
+    artworks.value.forEach(item => {
+        const img = new Image()
+        img.src = item.paintingURL
+        img.onload = () => {
+            item.orientation = img.naturalWidth > img.naturalHeight
+                ? 'landscape'
+                : 'portrait'
+        }
+    })
 }
 
 function readJSON() {
@@ -35,13 +43,13 @@ function readJSON() {
 
 function handleRenderArtwork(index) {
     currentIndex.value = index;
-    console.log(artworks.value[currentIndex.value])
 }
 </script>
 
 <template>
     <n-layout style="position: relative; font-family: 'IBM Plex Mono', monospace" has-sider>
-        <n-layout-sider @click="currentIndex = null" :style="{ opacity: currentIndex == null ? '1' : opacity, cursor: 'pointer' }" :width="'5rem'">
+        <n-layout-sider @click="currentIndex = null"
+            :style="{ opacity: currentIndex == null ? '1' : opacity, cursor: 'pointer' }" :width="'5rem'">
             <div class="rotated-text">
                 {{ description.toUpperCase() }}
             </div>
@@ -74,8 +82,11 @@ function handleRenderArtwork(index) {
                             </n-flex>
                         </n-flex>
                         <n-flex :justify="'center'">
-                            <n-image ref="currentImage" style="box-shadow: var(--boxShadow-light);" :width="360"
-                                :src="artworks[currentIndex].paintingURL"></n-image>
+                            <div v-if="artworks[currentIndex].paintingURL.length">
+                                <n-image ref="currentImage" style="box-shadow: var(--boxShadow-light);"
+                                    :width="artworks[currentIndex].orientation === 'landscape' ? 540 : 360"
+                                    :src="artworks[currentIndex].paintingURL"></n-image>
+                            </div>
                         </n-flex>
                         <n-flex class="description" vertical>
                             <n-flex :justify="'space-between'" style="font-size: 0.6rem">
