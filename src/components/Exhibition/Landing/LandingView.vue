@@ -15,27 +15,27 @@ I'm a remarkably gifted teenage painter whose work already demonstrates a maturi
 well beyond her years. From early on, she showed an intuitive understanding of color, composition, and
 balance—qualities.`
 
-onMounted(() => {
-    initial();
-})
-
-watch(currentIndex, newVal => {
-    console.log(currentImage)
-})
-
-async function initial() {
+onMounted(async () => {
     const buffer = await readJSON();
     artworks.value = buffer.data;
+
     artworks.value.forEach(item => {
-        const img = new Image()
-        img.src = item.paintingURL
+        const img = new Image();
+        img.src = item.paintingURL[0];
         img.onload = () => {
             item.orientation = img.naturalWidth > img.naturalHeight
                 ? 'landscape'
-                : 'portrait'
-        }
-    })
-}
+                : 'portrait';
+            item.width = item.orientation === 'landscape' ? 540 : 360;
+            item.height = item.width * img.naturalHeight / img.naturalWidth;
+            artworks.value = [...artworks.value];
+        };
+    });
+});
+
+watch(currentIndex, newVal => {
+    console.log(artworks.value[newVal])
+})
 
 function readJSON() {
     return axios('/myexhibition/json/gallery-2.json')
@@ -70,7 +70,7 @@ function handleRenderArtwork(index) {
                 </div>
                 <div class="artwork-content" v-else>
                     <n-flex class="image-content" vertical :size="24">
-                        <n-flex vertical :size="12">
+                        <n-flex class="artworkInfo" vertical :size="12">
                             <div>[{{ currentIndex + 1 }}]</div>
                             <n-flex vertical>
                                 <div>{{ artworks[currentIndex].label }}</div>
@@ -82,10 +82,17 @@ function handleRenderArtwork(index) {
                             </n-flex>
                         </n-flex>
                         <n-flex :justify="'center'">
-                            <div v-if="artworks[currentIndex].paintingURL.length">
+                            <div v-if="artworks[currentIndex].paintingURL.length == 1">
                                 <n-image ref="currentImage" style="box-shadow: var(--boxShadow-light);"
-                                    :width="artworks[currentIndex].orientation === 'landscape' ? 540 : 360"
-                                    :src="artworks[currentIndex].paintingURL"></n-image>
+                                    :width="artworks[currentIndex].width"
+                                    :src="artworks[currentIndex].paintingURL[0]"></n-image>
+                            </div>
+                            <div v-else-if="artworks[currentIndex].paintingURL.length > 1" style="background: #000;"
+                                :style="{ width: `calc(${artworks[currentIndex].width}px + 3.2rem)`, height: `${artworks[currentIndex].height}px` }">
+                                <n-carousel show-arrow draggable dot-type="line" dot-placement="right">
+                                    <n-image v-for="url in artworks[currentIndex].paintingURL" ref="currentImage"
+                                        :width="artworks[currentIndex].width" :src="url"></n-image>
+                                </n-carousel>
                             </div>
                         </n-flex>
                         <n-flex class="description" vertical>
@@ -115,7 +122,7 @@ function handleRenderArtwork(index) {
                 <div class="artwork-container" v-for="(artwork, index) in artworks" @click="handleRenderArtwork(index)">
                     <n-flex :align="'end'">
                         <div>[{{ index + 1 }}]</div>
-                        <img :src="artwork.paintingURL" />
+                        <img :src="artwork.paintingURL[0]" />
                     </n-flex>
                 </div>
             </n-flex>
@@ -155,10 +162,13 @@ function handleRenderArtwork(index) {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     font-size: 0.8rem;
 
     .image-content {
+        .artworkInfo {
+            text-align: center;
+        }
+
         img {
             width: 480px;
             max-width: 100%;
