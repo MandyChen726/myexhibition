@@ -22,13 +22,26 @@ watch(curArtwork, (newVal) => {
     const nextArtwork = artworks.value[nextIndex]
     const prevArtwork = artworks.value[prevIndex]
 
-    preloadImage(nextArtwork?.paintingURL)
-    preloadImage(prevArtwork?.paintingURL)
+    preloadImage(nextArtwork?.paintingURL[0])
+    preloadImage(prevArtwork?.paintingURL[0])
 })
 
 async function initial() {
     const buffer = await readJSON();
     artworks.value = buffer.data;
+    artworks.value = artworks.value.map((a, i) => {
+        a.id = i + 1;
+        const img = new Image();
+        img.src = a.paintingURL[0];
+        img.onload = () => {
+            a.orientation = img.naturalWidth > img.naturalHeight
+                ? 'landscape'
+                : 'portrait';
+            a.width = a.orientation === 'landscape' ? 540 : 360;
+            a.height = a.width * img.naturalHeight / img.naturalWidth;
+        };
+        return a
+    })
     if (!router.currentRoute.value.params.artworkKey) {
         router.push({ name: "Exhibition-artwork", params: { artworkKey: buffer.data[0].key } })
         curArtwork.value = buffer.data[0]

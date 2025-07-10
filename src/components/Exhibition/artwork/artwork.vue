@@ -35,12 +35,19 @@ function handleLastNext(action) {
 <template>
     <transition>
         <div v-if="readyRender" class="artwork_container" :style="{
-            backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 80%), url(${curArtwork.paintingURL})`
+            backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 80%), url(${curArtwork.paintingURL[0]})`
         }">
             <div style="position: relative; padding: 24px; z-index: 2;">
                 <n-grid :x-gap="48">
                     <n-gi v-if="curArtwork.left" :span="curArtwork.span[1]" class="painting">
-                        <n-image :src="curArtwork.paintingURL"></n-image>
+                        <div class="painting" v-if="curArtwork.paintingURL.length == 1">
+                            <n-image :src="curArtwork.paintingURL[0]"></n-image>
+                        </div>
+                        <div class="painting" v-else-if="curArtwork.paintingURL.length > 1" style="background: #000;">
+                            <n-carousel show-arrow draggable dot-type="line" dot-placement="right">
+                                <n-image v-for="url in curArtwork.paintingURL" ref="currentImage" :src="url"></n-image>
+                            </n-carousel>
+                        </div>
                     </n-gi>
                     <n-gi v-else :span="curArtwork.span[0]">
                         <n-flex vertical style="position: relative; height: calc(100vh - 77px - 96px - 48px);">
@@ -81,8 +88,15 @@ function handleLastNext(action) {
                             </n-grid>
                         </n-flex>
                     </n-gi>
-                    <n-gi v-if="!curArtwork.left" :span="curArtwork.span[1]" class="painting">
-                        <n-image :src="curArtwork.paintingURL"></n-image>
+                    <n-gi v-if="!curArtwork.left" :span="curArtwork.span[1]">
+                        <div class="painting" v-if="curArtwork.paintingURL.length == 1">
+                            <n-image :src="curArtwork.paintingURL[0]"></n-image>
+                        </div>
+                        <div class="painting" v-else-if="curArtwork.paintingURL.length > 1" style="background: #000;">
+                            <n-carousel show-arrow draggable dot-type="line" dot-placement="right">
+                                <n-image v-for="url in curArtwork.paintingURL" ref="currentImage" :src="url"></n-image>
+                            </n-carousel>
+                        </div>
                     </n-gi>
                     <n-gi v-else :span="curArtwork.span[0]">
                         <n-flex vertical style="position: relative; height: calc(100vh - 77px - 96px - 48px);">

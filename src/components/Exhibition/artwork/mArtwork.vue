@@ -24,6 +24,7 @@ watch(() => props.curArtwork, newVal => {
 })
 
 function initial() {
+    console.log(props.curArtwork)
     readyRender.value = true;
 }
 
@@ -46,8 +47,14 @@ function handleLastNext(action) {
                         <div class="date">
                             <b>{{ curArtwork.date }}</b>
                         </div>
-                        <div class="painting">
-                            <n-image :src="curArtwork.paintingURL"></n-image>
+                        <div class="painting" v-if="curArtwork.paintingURL.length == 1">
+                            <n-image :src="curArtwork.paintingURL[0]"></n-image>
+                        </div>
+                        <div class="painting" v-else-if="curArtwork.paintingURL.length > 1"
+                            :style="{ height: `${curArtwork.height}px` }">
+                            <n-carousel show-arrow draggable dot-type="line" dot-placement="right">
+                                <n-image v-for="url in curArtwork.paintingURL" ref="currentImage" :src="url"></n-image>
+                            </n-carousel>
                         </div>
                         <n-flex vertical :size="24">
                             <n-flex vertical>
@@ -154,7 +161,7 @@ function handleLastNext(action) {
 
     .painting {
         :deep(img) {
-            width: 100%;
+            max-width: 100%;
             object-fit: contain !important;
             -webkit-text-size-adjust: 100% !important;
             -webkit-text-size-adjust: none;
